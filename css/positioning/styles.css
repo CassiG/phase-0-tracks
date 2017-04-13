@@ -6,9 +6,9 @@
 .glasses img {
     display: block;
     margin: 0 auto;
-    position: absolute;
-        bottom: 442px;
-    left: 372px;
+    position: relative;
+    bottom: 188px;
+    left: 6px;
 }
 
 .hat img {
