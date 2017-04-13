@@ -1,0 +1,27 @@
+#contact-info {
+	font-size: .8em;
+}
+
+.job {
+	background-color: #e9e5dc;
+	border-radius: 25px;
+	padding: 10, 10, 10, 10;
+	margin: 20, 0, 20, 0;
+}
+
+.accomplishments {
+	font-size: .8em;
+}
+
+li:first-child {
+	color: green;
+}
+
+section h3 {
+	background-color: pink;
+}
+
+#work-experience h3 {
+	background-color: red;
+
+}
