@@ -1,11 +1,12 @@
 body {
-  width: 960px;
+  max-width: 960px;
 }
 
 main {
-  width: 756px;
+  width: 50%;
   display: inline-block;
   vertical-align: top;
+  padding: 20px;
 }
 
 blockquote {
@@ -20,9 +21,10 @@ cite {
 }
 
 #external-links {
-  width: 200px;
+  width: 20%;
   display: inline-block;
   vertical-align: top;
+  padding: 20px;
 }
 
 #external-links ul {
@@ -49,3 +51,23 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  main {
+    display: block;
+  }
+
+  #external-links {
+    display: block;
+  }
+} 
+
+/* @media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+} */
