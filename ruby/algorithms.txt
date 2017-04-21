@@ -1,0 +1,20 @@
+## Pseudocode instructions for Elevator Robot 
+
+- When elevator doors open, move forward until elevator wall is reached 
+- Turn 180 degrees so you are now facing the opposite elevator wall 
+- Look to the left side of the elevator
+- If elevator buttons are seen
+    - Ask user what floor they would like
+    - Locate button #1 in the elevator button section
+    - Count up until user number is reached
+    - Press the button with the same number as the user number
+- Else if no elevator buttons are seen, look to the right side of the elevator
+- If elevator buttons are seen
+    - Ask user what floor they would like
+    - Locate button #1 in the elevator button section
+    - Count up until user number is reached
+    - Press the button with the same number as the user number
+- Wait for elevator to move and reach desired floor number
+- Wait for doors to open
+- Once doors open, move forward to exit elevator
+- Stop Elavator Program
