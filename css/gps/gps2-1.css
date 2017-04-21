@@ -1,0 +1,49 @@
+header, footer {
+  margin: 3%;
+  padding: 3%;
+  border: 1px;
+  border-color: black;
+  text-align: center;
+  border-style: solid;
+  
+}
+header p:first-letter {
+  font-size: 200%;
+}
+
+.column-1, .column-2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 44%;
+  margin: 1%;
+  padding: 1%;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  height: 600px;
+  overflow: scroll;
+  background-color: lightgrey;  
+}
+
+.column-1::-webkit-scrollbar, .column-2::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+.column-1::-webkit-scrollbar-track, .column-2::-webkit-scrollbar-track {
+  background-color: grey;
+}
+
+.column-1::-webkit-scrollbar-thumb, .column-2::-webkit-scrollbar-thumb {
+  background-color: rgb(125,3,160);
+}
+body {
+  font-family: helvetica, sans-serif;  
+}
+
+@media screen and (max-width: 200px) {
+  .column-1, column-2 {
+    display:block;
+    width: 97%;
+  }
+  
+}
