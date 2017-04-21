@@ -1,0 +1,58 @@
+## Pseudocode instructions for Elevator Robot 
+
+- When elevator doors open, move forward until elevator wall is reached 
+- Turn 180 degrees so you are now facing the opposite elevator wall 
+- Look to the left side of the elevator
+- If elevator buttons are seen
+    - Ask user what floor they would like
+    - Locate button #1 in the elevator button section
+    - Count up until user number is reached
+    - Press the button with the same number as the user number
+- Else if no elevator buttons are seen, look to the right side of the elevator
+- If elevator buttons are seen
+    - Ask user what floor they would like
+    - Locate button #1 in the elevator button section
+    - Count up until user number is reached
+    - Press the button with the same number as the user number
+- Wait for elevator to move and reach desired floor number
+- Wait for doors to open
+- Once doors open, move forward to exit elevator
+- Stop Elavator Program
+
+## Pseudocode for Feeding my Dog Breakfast Program
+
+- Set Breakfast Time to 7:00am
+- Check Time
+- When 7:00am 
+    - Move forward in kitchen until sink wall is hit
+    - Reach above sink to cupboard
+    - Open Cupboard
+    - Pull out Dog Food Bin
+    - Open Dog Food Bin 
+    - Pull out one scoop of food
+    - Turn right
+    - Move along sink wall until you are in hallway
+    - Turn left 
+    - Look down to dog food bowl
+
+    - If dog food bowl is present
+        - Place scoop of food in dog bowl
+        - Turn left 
+        - Move forward back into kitchen
+        - Move forward along sink wall back to food bin
+        - Place food scoop in bin
+        - Pick up dog food bin and place it in cupboard
+        - Close cupboard
+    - If no dog food bowl is present
+        - Turn left 
+        - Move forward back into kitchen
+        - Move forward along sink wall until you hit dishwasher
+        - Open dishwasher
+        - Pull out dog food bowl
+        - Put dog food bowl on floor
+        - Place food scoop in bin
+        - Turn right
+        - Pick up dog food bin and place it in cupboard
+        - Close cupboard
+- Call to dog "Breakfast time!"
+
