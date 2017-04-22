@@ -3,7 +3,7 @@
 # Question Block
 
 puts "What is your name?" #If they have an obvious vampire name
-name = gets.chomp
+vampire_name = gets.chomp.downcase
 
 puts "How old are you?" #Vampires are probably several hundered years old 
 age = gets.chomp.to_i
@@ -19,10 +19,10 @@ health = gets.chomp
 
 # Logic Block
 
-#If age does line up with year, and will garlic bread or sign up for insurance
+#If age does line up with year, and will eat garlic bread or sign up for insurance
 	# They are: “Probably not a vampire.”
 
-if Time.new.year - age) == year && (garlic = "yes" || health = "yes")
+if (Time.new.year - age) == year && (garlic = "yes" || health = "yes")
 	puts "Probably not a vampire"
 
 #If age doesn't line up with year, and hates garlic bread or waives insurance
@@ -30,12 +30,21 @@ if Time.new.year - age) == year && (garlic = "yes" || health = "yes")
 
 elsif (Time.new.year - age) != year && (garlic = "no" || health = "no")
 	puts "Probably a vampire"
-end
 
 #If the employee got their age wrong, hates garlic bread, and doesn’t want insurance
 	# They are: “Almost certainly a vampire.”
 
+elsif (Time.new.year - age) != year && garlic = "no" && health = "no"
+	puts "Almost certainly a vampire" 
+
 #Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. 
 	# They are: “Definitely a vampire.”
 
+elsif vampire_name = "drake cula" || vampire_name = "tu fang"
+	puts "They are definitely a vampire"
+
 #Otherwise, print “Results inconclusive.”
+
+else puts "“Results inconclusive"
+
+end
