@@ -27,18 +27,23 @@ while i < employees do
 		puts "Would you like to enroll in the company’s health insurance? (yes/no)" 
 			health = gets.chomp
 
-		#Check specifically for sunshine allergy
+	#Check specifically for sunshine allergy
 		loop_counter = 0
+		allergy = false
 
 		loop do
 			puts "Do you have any allergies? List them here, one at a time then type done when complete"
 				response = gets.chomp.downcase
 				
 				if response == "sunshine"
-					puts "Probably a vampire"
+
+					#You can end your check here because they are: 
+					allergy = true
+					puts "Probably a vampire\n"
 					break
+
 				elsif response == "done"
-					break
+					break		
 				end
 			loop_counter += 1
 		end
@@ -47,26 +52,29 @@ while i < employees do
 		current_year = Time.new.year
 		calculated_birthday = current_year - age
 
-	#Check to see if employee is a vampire
+	#Continue on to check to see if employee is a vampire
 		#Check first, if they have an obvious vampire name, so we can rule them out IMMEDIATLY
-		if vampire_name == "drake cula" || vampire_name == "tu fang"
+		if allergy == false && (vampire_name == "drake cula" || vampire_name == "tu fang")
 			result = "They are definitely a vampire\n"
 
 			#Check if their birth year age or they're over 100, hates garlic and waives insurance
-			elsif (calculated_birthday != year || age > 100) && garlic == "no" && health == "no"
+			elsif allergy == false && ((calculated_birthday != year || age > 100) && garlic == "no" && health == "no")
 				result =  "Almost certainly a vampire\n" 
 
 			#Check if birth year matches age or they're over a hundred, and either hates garlic or waives insurance
-			elsif (calculated_birthday != year || age > 100) && (garlic == "no" || health == "no")
+			elsif allergy == false && ((calculated_birthday != year || age > 100) && (garlic == "no" || health == "no"))
 				result =  "Probably a vampire\n"
 
 			#Check if birth year matchs age and they're less than a hundred, and either want garlic or insurance 
-			elsif (calculated_birthday == year && age <= 100) && (garlic == "yes" || health == "yes")
+			elsif allergy == false && ((calculated_birthday == year && age <= 100) && (garlic == "yes" || health == "yes"))
 				result =  "Probably not a vampire\n"
 
-			else result =  "Results inconclusive\n"
+			elsif allergy == false 
+				result =  "Results inconclusive\n"
 		end
 	puts result
 	i += 1
 end
 
+# End with the plot twist becuase we don't really care after all
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
