@@ -27,6 +27,22 @@ while i < employees do
 		puts "Would you like to enroll in the company’s health insurance? (yes/no)" 
 			health = gets.chomp
 
+		#Check specifically for sunshine allergy
+		loop_counter = 0
+
+		loop do
+			puts "Do you have any allergies? List them here, one at a time then type done when complete"
+				response = gets.chomp.downcase
+				
+				if response == "sunshine"
+					puts "Probably a vampire"
+					break
+				elsif response == "done"
+					break
+				end
+			loop_counter += 1
+		end
+
 	#Additional variables for checking
 		current_year = Time.new.year
 		calculated_birthday = current_year - age
