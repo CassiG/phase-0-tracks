@@ -28,8 +28,10 @@ i = 0
 
 # Logic Block
 
-while i <= employees
-	#Check if they have an obvious vampire name
+# While i which is 0 is less than the number of employees
+while i < employees do
+	
+	#Check first, if they have an obvious vampire name, so we can rule them out IMMEDIATLY
 	if vampire_name == "drake cula" || vampire_name == "tu fang"
 		result = "They are definitely a vampire"
 
@@ -46,7 +48,8 @@ while i <= employees
 			result =  "Probably not a vampire"
 
 		else result =  "Results inconclusive"
+		return result
 	end
 end
 
-puts result
+	puts result
