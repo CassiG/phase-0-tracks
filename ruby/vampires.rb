@@ -19,14 +19,18 @@ health = gets.chomp
 
 # Logic Block
 
-#If employee is less than 100 years old and will garlic bread or sign up for insurance
+#If age does line up with year, and will garlic bread or sign up for insurance
 	# They are: “Probably not a vampire.”
 
-if age < 100 && (garlic = "yes" || health = "yes")
-	probably_not_vampire = true
+if Time.new.year - age) == year && (garlic = "yes" || health = "yes")
+	puts "Probably not a vampire"
 
-#If the employee got their age wrong, and hates garlic bread or waives insurance
+#If age doesn't line up with year, and hates garlic bread or waives insurance
 	# They are: “Probably a vampire.”
+
+elsif (Time.new.year - age) != year && (garlic = "no" || health = "no")
+	puts "Probably a vampire"
+end
 
 #If the employee got their age wrong, hates garlic bread, and doesn’t want insurance
 	# They are: “Almost certainly a vampire.”
