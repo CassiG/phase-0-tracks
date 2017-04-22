@@ -1,4 +1,8 @@
+## 
 # Program to detect if a new employee is a Vampire
+# Created by Cassi Gallagher for 4.4 DevBootcamp Challange 
+# 2017
+##
 
 # Check how many employees will be processed
 puts "How many employees will you be checking"
