@@ -43,6 +43,7 @@ while i < employees do
 					break
 
 				elsif response == "done"
+					allergy = false
 					break		
 				end
 			loop_counter += 1
@@ -66,11 +67,10 @@ while i < employees do
 				result =  "Probably a vampire\n"
 
 			#Check if birth year matchs age and they're less than a hundred, and either want garlic or insurance 
-			elsif allergy == false && ((calculated_birthday == year && age <= 100) && (garlic == "yes" || health == "yes"))
+			elsif allergy == false && ((calculated_birthday == year || age <= 100) && (garlic == "yes" || health == "yes"))
 				result =  "Probably not a vampire\n"
 
-			elsif allergy == false 
-				result =  "Results inconclusive\n"
+			else result = "Results inconclusive\n"
 		end
 	puts result
 	i += 1
