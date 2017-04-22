@@ -2,6 +2,9 @@
 
 # Question Block
 
+puts "How many employees will you be checking"
+employees = gets.chomp.to_i
+
 puts "What is your name?" 
 vampire_name = gets.chomp.downcase
 
@@ -21,26 +24,29 @@ health = gets.chomp
 
 current_year = Time.new.year
 calculated_birthday = current_year - age
+i = 0
 
 # Logic Block
 
-#Check if they have an obvious vampire name
-if vampire_name == "drake cula" || vampire_name == "tu fang"
-	result = "They are definitely a vampire"
+while i <= employees
+	#Check if they have an obvious vampire name
+	if vampire_name == "drake cula" || vampire_name == "tu fang"
+		result = "They are definitely a vampire"
 
-	#Check if their birth year age or they're over 100, hates garlic and waives insurance
-	elsif (calculated_birthday != year || age > 100) && garlic == "no" && health == "no"
-		result =  "Almost certainly a vampire" 
+		#Check if their birth year age or they're over 100, hates garlic and waives insurance
+		elsif (calculated_birthday != year || age > 100) && garlic == "no" && health == "no"
+			result =  "Almost certainly a vampire" 
 
-	#Check if birth year matches age or they're over a hundred, and either hates garlic or waives insurance
-	elsif (calculated_birthday != year || age > 100) && (garlic == "no" || health == "no")
-		result =  "Probably a vampire"
+		#Check if birth year matches age or they're over a hundred, and either hates garlic or waives insurance
+		elsif (calculated_birthday != year || age > 100) && (garlic == "no" || health == "no")
+			result =  "Probably a vampire"
 
-	#Check if birth year matchs age and they're less than a hundred, and either want garlic or insurance 
-	elsif (calculated_birthday == year && age <= 100) && (garlic == "yes" || health == "yes")
-		result =  "Probably not a vampire"
+		#Check if birth year matchs age and they're less than a hundred, and either want garlic or insurance 
+		elsif (calculated_birthday == year && age <= 100) && (garlic == "yes" || health == "yes")
+			result =  "Probably not a vampire"
 
-	else result =  "Results inconclusive"
+		else result =  "Results inconclusive"
+	end
 end
 
 puts result
