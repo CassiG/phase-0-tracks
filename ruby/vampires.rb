@@ -2,49 +2,45 @@
 
 # Question Block
 
-puts "What is your name?" #If they have an obvious vampire name
+puts "What is your name?" 
 vampire_name = gets.chomp.downcase
 
-puts "How old are you?" #Vampires are probably several hundered years old 
+puts "How old are you?" 
 age = gets.chomp.to_i
 
-puts "What year were you born?" #If they mess up year and age
+puts "What year were you born?" 
 year = gets.chomp.to_i
 
-puts "Our company cafeteria serves garlic bread. Should we order some for you? (yes/no)" #Vampires hate garlic bread
+puts "Our company cafeteria serves garlic bread. Should we order some for you? (yes/no)" 
 garlic = gets.chomp.downcase
 
-puts "Would you like to enroll in the company’s health insurance? (yes/no)" #Vampires don't need insurance
+puts "Would you like to enroll in the company’s health insurance? (yes/no)" 
 health = gets.chomp
+
+#Additional Variables for logic block
+
+current_year = Time.new.year
+calculated_birthday = current_year - age
 
 # Logic Block
 
-#If age does line up with year, and will eat garlic bread or sign up for insurance
-	# They are: “Probably not a vampire.”
+#Check if they have an obvious vampire name
+if vampire_name == "drake cula" || vampire_name == "tu fang"
+	result = "They are definitely a vampire"
 
-if (Time.new.year - age) == year && (garlic = "yes" || health = "yes")
-	puts "Probably not a vampire"
+	#Check if their birth year age or they're over 100, hates garlic and waives insurance
+	elsif (calculated_birthday != year || age > 100) && garlic == "no" && health == "no"
+		result =  "Almost certainly a vampire" 
 
-#If age doesn't line up with year, and hates garlic bread or waives insurance
-	# They are: “Probably a vampire.”
+	#Check if birth year matches age or they're over a hundred, and either hates garlic or waives insurance
+	elsif (calculated_birthday != year || age > 100) && (garlic == "no" || health == "no")
+		result =  "Probably a vampire"
 
-elsif (Time.new.year - age) != year && (garlic = "no" || health = "no")
-	puts "Probably a vampire"
+	#Check if birth year matchs age and they're less than a hundred, and either want garlic or insurance 
+	elsif (calculated_birthday == year && age <= 100) && (garlic == "yes" || health == "yes")
+		result =  "Probably not a vampire"
 
-#If the employee got their age wrong, hates garlic bread, and doesn’t want insurance
-	# They are: “Almost certainly a vampire.”
-
-elsif (Time.new.year - age) != year && garlic = "no" && health = "no"
-	puts "Almost certainly a vampire" 
-
-#Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. 
-	# They are: “Definitely a vampire.”
-
-elsif vampire_name = "drake cula" || vampire_name = "tu fang"
-	puts "They are definitely a vampire"
-
-#Otherwise, print “Results inconclusive.”
-
-else puts "“Results inconclusive"
-
+	else result =  "Results inconclusive"
 end
+
+puts result
