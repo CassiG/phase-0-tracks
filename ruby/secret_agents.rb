@@ -8,10 +8,10 @@ def encrypt(password)
 		password[index] = password[index].next
 		index += 1
 	end
-
+	return password
 end
 
-puts encrypt("abc")
+puts encrypt(password)
 
 #puts encrypt("zed")
 
