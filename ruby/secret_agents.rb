@@ -1,5 +1,8 @@
 # Encrypt Method
 
+puts "Please enter your password"
+password = gets.chomp 
+
 def encrypt(password)
 
 	index = 0
