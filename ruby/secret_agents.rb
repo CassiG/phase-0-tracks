@@ -1,15 +1,22 @@
 # Encrypt Method
 
+#Get password from user
 puts "Please enter your password"
-password = gets.chomp 
+password = gets.chomp.downcase
 
+#Create a function to process letter to the next letter
 def encrypt(password)
-
 	index = 0
-
 	while index < password.length
-		password[index] = password[index].next
-		index += 1
+
+		#if the next letter is a z force it to a
+		if password[index] == "z"
+			password[index] = "a"
+
+		#otherwise let it go to the next letter
+		elsif password[index] = password[index].next
+		end
+	index += 1
 	end
 	return password
 end
@@ -20,27 +27,21 @@ puts encrypt(password)
 
 # Decrypt Method
 
-#def decrypt(password)
-	# Grab the first three letters of password
-#	first_letter = password[0]
-#	second_letter = password[1]
-#	third_letter = password[2]	
+puts "Please enter your password"
+password = gets.chomp.downcase 
 
-	# Check where a letter is
-#	decrypt_first_number = "abcdefghijklmnopqrstuvwxyz".index(first_letter) - 1
-#	decrypt_first_letter = "abcdefghijklmnopqrstuvwxyz"[decrypt_first_number]
+def decrypt(password)
 
-#	decrypt_second_number = "abcdefghijklmnopqrstuvwxyz".index(second_letter) - 1
-#	decrypt_second_letter = "abcdefghijklmnopqrstuvwxyz"[decrypt_second_number]
+	index = 0
+	
+	while index < password.length
+		decrypt_first_number = "abcdefghijklmnopqrstuvwxyz".index(password[index]) - 1
+		password[index] = "abcdefghijklmnopqrstuvwxyz"[decrypt_first_number]
+ 	index += 1
+	end
+	return password
+end
 
-#	decrypt_third_number = "abcdefghijklmnopqrstuvwxyz".index(third_letter) - 1
-#	decrypt_third_letter = "abcdefghijklmnopqrstuvwxyz"[decrypt_third_number]	
-
-	#print out new password
-#	decrypt_first_letter + decrypt_second_letter + decrypt_third_letter
-#end
-
-#puts decrypt("bcd")
-#puts decrypt("afe")
+puts decrypt(password)
 
 #puts decrypt(encrypt("swordfish"))
