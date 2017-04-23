@@ -27,6 +27,7 @@ puts encrypt(password)
 
 # Decrypt Method
 
+#Get password from user
 puts "Please enter your password"
 password = gets.chomp.downcase 
 
@@ -34,14 +35,17 @@ def decrypt(password)
 
 	index = 0
 	
+	#Create a function to process letter to the last letter
 	while index < password.length
 		decrypt_first_number = "abcdefghijklmnopqrstuvwxyz".index(password[index]) - 1
 		password[index] = "abcdefghijklmnopqrstuvwxyz"[decrypt_first_number]
  	index += 1
 	end
+	
 	return password
 end
 
 puts decrypt(password)
 
-#puts decrypt(encrypt("swordfish"))
+#Test nested method
+puts decrypt(encrypt("swordfish"))
