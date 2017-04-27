@@ -10,7 +10,7 @@ puts "iNvEsTiGaTiOn".swapcase
 puts "zom".insert(2, 'o') 
 # => “zoom”
 
-# "enhance".<???>
+puts "enhance".center(15)
 # => "    enhance    "
 
 puts "Stop! You’re under arrest!".upcase
