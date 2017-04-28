@@ -63,4 +63,14 @@ puts "Do you need to edit an answer? If yes, type the name of the section. If no
 		interior_info[:tiny] = new_tiny
 	end
  
+#Print hash back out onto screen 
 p interior_info
+
+#Print Human Readable List
+puts "Here is your info"
+puts "Name = #{interior_info[:name]}"
+puts "Age = #{interior_info[:age]}"
+puts "Kids = #{interior_info[:kids]}"
+puts "Style Preference = #{interior_info[:style]}"
+puts "Favorite Blue = #{interior_info[:color]}"
+puts "Tiny House? = #{interior_info[:tiny]}"
