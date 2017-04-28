@@ -36,29 +36,29 @@ puts "Do you need to edit an answer? If yes, type the name of the section. If no
 
 #Check which answer they'd like to change
 	if input == "none"
-		print "Thanks for the info!"
+		puts "Thanks for the info!"
 	elsif input == "name"
-		print "What would you like to update it to?"
+		print "What would you like to update it to? "
 		new_name = gets.chomp
 		interior_info[:name] = new_name
 	elsif input == "age"
-		print "What would you like to update it to?"
+		print "What would you like to update it to? "
 		new_age = gets.chomp
 		interior_info[:age] = new_age
 	elsif input == "kids"
-		print "What would you like to update it to?"
+		print "What would you like to update it to? "
 		new_kids = gets.chomp
 		interior_info[:kids] = new_kids
 	elsif input == "style"
-		print "What would you like to update it to?"
+		print "What would you like to update it to? "
 		new_style = gets.chomp
 		interior_info[:style] = new_style
 	elsif input == "favorite blue"
-		print "What would you like to update it to?"
+		print "What would you like to update it to? "
 		new_blue = gets.chomp
 		interior_info[:color] = new_blue
 	elsif input == "tiny house"
-		print "What would you like to update it to?"
+		print "What would you like to update it to? "
 		new_tiny = gets.chomp
 		interior_info[:tiny] = new_tiny
 	end
