@@ -5,25 +5,18 @@ animal_shelter = {
 		sign_title: 'Dogs for Adoption',
 		adoption_availablity: {
 			dogs_available: 2, 
-			pending_adoption: 1
+			pending_adoption: 0
 		},
 		dog_info: {
-			
-			room_1: {
-				name: 'Baxter',
-				availability: 'Pending Adoption',
-				breed: 'Border Collie',
-				age: 7
-			}, 
 
-			room_2: {
+			room_1: {
 				name: 'Leia',
 				availability: 'Available for Adoption',
 				breed: 'American Pit Bull Terrier',
 				age: 1
 			},
 
-			room_3: {
+			room_2: {
 				name: 'Luke',
 				availability: 'Available for Adoption',
 				breed: 'American Pit Bull Terrier',
@@ -36,25 +29,18 @@ animal_shelter = {
 		sign_title: 'Cats for Adoption',
 		adoption_availablity: {
 			cats_available: 1, 
-			pending_adoption: 2
+			pending_adoption: 1
 		},
 		cat_info: {
-			
-			room_4: {
-				name: 'Apollo',
-				availability: 'Pending Adoption',
-				breed: 'Siamese',
-				age: 1
-			},
 
-			room_5: {
+			room_3: {
 				name: 'Prancer',
 				availability: 'Pending Adoption',
 				breed: 'Rag Doll',
-				age: 7,
+				age: 7
 			},
 
-			room_6: {
+			room_4: {
 				name: 'Milo',
 				availability: 'Available for Adoption',
 				breed: 'Shorthair',
@@ -76,14 +62,14 @@ animal_shelter = {
 			}	
 		},
 		animal_info:  {
-			room_7: {
+			room_5: {
 				name: 'Joey',
 				availability: 'Available for Adoption',
 				breed: 'Box Turtle',
 				age: 2
 			},
 
-			room_8: {
+			room_6: {
 				name: 'Max',
 				availability: 'Available for Adoption',
 				breed: 'Mini Rex Rabbit',
