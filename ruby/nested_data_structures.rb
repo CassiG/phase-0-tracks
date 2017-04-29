@@ -79,4 +79,20 @@ animal_shelter = {
 	}
 }
 
-p animal_shelter
+#Print peices of data from the nested array to show understanding
+
+	#Retrieve info about the second cat:
+		puts "#{animal_shelter[:cats][:cat_info][:room_4][:name]}, our second cat in the animal shelter is #{animal_shelter[:cats][:cat_info][:room_4][:age]} years old\n\n"
+
+	#Retrieve info about dogs available: 
+		puts "Currently we have #{animal_shelter[:dogs][:adoption_availablity][:dogs_available]} dogs available for adoption\n\n"
+
+	#Retrieve info about other animals that are available
+		puts "We also have other types of animals. We currently have a #{animal_shelter[:other][:adoption_availablity][:types][1]} available. He is a #{animal_shelter[:other][:animal_info][:room_5][:breed]} and he is #{animal_shelter[:other][:animal_info][:room_5][:availability]}\n\n"
+
+	#Retrieve all animal types
+		puts "We currently have #{animal_shelter[:dogs][:sign_title]}, #{animal_shelter[:cats][:sign_title]}, and #{animal_shelter[:other][:sign_title]} such as a #{animal_shelter[:other][:adoption_availablity][:types][0]} and a #{animal_shelter[:other][:adoption_availablity][:types][1]}\n\n"
+
+	#Retrieve all info for first dog 
+		puts "Here is inforamtion on our first dog: #{animal_shelter[:dogs][:dog_info][:room_1]}"
+	
