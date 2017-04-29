@@ -20,14 +20,21 @@
 #Split the letters up into its own array
 	next_letter = split_name.join(' ').split('') #use join to put the name back together before splitting characters
 
-#Advance next vowel
-	vowel = ['a', 'e', 'i', 'o', 'u'] #first, define a vowel
-	
-	# map through each letter in the string
-	# if letter equals a vowel
-	# rotate that vowel to the next vowel 
-	
-#Change all the consonants to the next consonants
+#Advance next vowel	
+	#next_vowel = next_letter.map do |char| #iterate through the string
+		#vowel = ['a', 'e', 'i', 'o', 'u'] #define a vowel
+		#if vowel.include?(char) #at each letter, check if it is a vowel
+			#p char = vowel.next #if so, rotate it to the next vowel **This is where I am hung up - checking to see if it IS a vowel, but not knowing what the next step is from there
+		#else 
+			#p char #if not, move on to the next letter
+		#end
+	#end
+
+#Advance next consonants
+
+## Hide all the code that's making me crazy and use option b, just changes the letters somehow
+	new_name = next_letter.shuffle.join('')
+	p new_name.capitalize
 #Join the letters back together
 
 #Step 3: Print new fake name 
