@@ -24,7 +24,7 @@
 	#next_vowel = next_letter.map do |char| #iterate through the string
 		#vowel = ['a', 'e', 'i', 'o', 'u'] #define a vowel
 		#if vowel.include?(char) #at each letter, check if it is a vowel
-			#p char = vowel.next #if so, rotate it to the next vowel **This is where I am hung up - checking to see if it IS a vowel, but not knowing what the next step is from there
+			#p char = vowel.rotate #if so, rotate it to the next vowel **This is where I am hung up - checking to see if it IS a vowel, but not knowing what the next step is from there
 		#else 
 			#p char #if not, move on to the next letter
 		#end
@@ -33,8 +33,11 @@
 #Advance next consonants
 
 ## Hide all the code that's making me crazy and use option b, just changes the letters somehow
-	new_name = next_letter.shuffle.join('')
-	p new_name.capitalize
-#Join the letters back together
+	mix_name = next_letter.shuffle.join('')
+
+#Capitalize and Join the letters back together
+	capitalize_name = mix_name.split.map {|char| char.capitalize}
 
 #Step 3: Print new fake name 
+	new_name = capitalize_name.join(' ')
+	print "Your new name is now #{new_name}. You may proceed with your mission, and good luck"
