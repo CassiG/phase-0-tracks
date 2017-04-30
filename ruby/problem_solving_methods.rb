@@ -13,7 +13,8 @@ def array_search(num1, num2)
 	end
 end
 
-#array_search(arr, 5)
+array_search(arr, 3)
+array_search(arr, 6)
 
 ###
 
@@ -34,7 +35,8 @@ def fib_method(num)
 	p arr
 end
 
-#fib_method(100)
+fib_method(6)
+fib_method(100)
 
 ###
 
