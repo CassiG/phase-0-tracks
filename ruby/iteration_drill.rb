@@ -14,10 +14,10 @@ puts "\n\n" #Seperate answers out
 
 # 2. In order to keep yourself organized, sort your zombie_apocalypse_supplies
 # in alphabetical order. Do not use any special built-in methods.
-zombie_apocalypse_supplies.each do |item1, item2|
-	 puts item1 <=> item2
+#zombie_apocalypse_supplies.each do |item1, item2|
+#	 puts item1 <=> item2
 
-end
+#end
 
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
@@ -31,14 +31,16 @@ new_bag = []
 trash = []
 
 zombie_apocalypse_supplies.each do |items|
-	if items.to_i >= 9
-		items << trash
-	elsif items.to_i < 9
-		items << new_bag
+	if items.length >= 9
+		trash << items
+	elsif items.length < 9 
+	 	new_bag << items
 	end
 end
 
 print new_bag
+puts "\n\n" #Seperate answers out
+
 
 # 5. You found another survivor! This means you can combine your supplies.
 # Create a new combined supplies list out of your zombie_apocalypse_supplies
