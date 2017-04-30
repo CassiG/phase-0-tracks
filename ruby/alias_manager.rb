@@ -3,20 +3,24 @@
 # Cassi Gallagher
 ###
 
-	#Release 2 - Loop through the following choices
+	#Greet User
+	puts "Hello Detective! Welcome to the mission." 
 
+	#Release 2 - Loop through the following choices
 	#Step 1: Ask if a detective wants to enter a name.
 	answer = '' 
-	
-	until answer == "yes" do
-		puts 'Hello Detective! Welcome to the mission. Would you like to create a fake name? (Type "yes" to proceed and "exit" to quit)'
+
+	until answer == "quit" do
+		print "Would you like to create a new fake name? (Type 'yes' to proceed and 'quit' when you're done) "
 		answer = gets.chomp.downcase
 
-		if answer == "exit"
-			puts "Good Luck on your mission"
-			break
+		if answer == "yes"
+			#Create a hash to store answers
+			new_name_hash = {
+				real_name: "",
+				fake_name: ""
+			}
 
-		elsif answer == "yes"
 			#Step 2: If yes, get detective's name
 			puts 'We need to create a fake name for you, please provide your current name to proceed'
 
@@ -26,6 +30,9 @@
 				last_name = gets.chomp.downcase 
 
 			full_name = first_name + ' ' + last_name
+
+			#Push full name into real name hash
+			new_name_hash[:real_name] = full_name
 
 			#Step 3: Create fake name
 			#Split the name into an array of words & reverse them
@@ -59,9 +66,16 @@
 
 			#Step 4: Print new fake name 
 			new_name = capitalize_name.join(' ')
-			print "Your new name is now #{new_name}. You may proceed with your mission, and good luck"
+			puts "Your new name is now #{new_name}. You may proceed with your mission, and good luck"
 		
 		end
+
+		if answer == "quit"
+			puts "Good Luck on your mission"
+			break
+		end
 	end
+
+	print new_name_hash
 	
 	
