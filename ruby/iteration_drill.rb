@@ -31,7 +31,9 @@ answer = gets.chomp.downcase
 
 zombie_apocalypse_supplies.map do |items|
 	if items != answer
-		puts "You need this item"
+		puts "This is a(n) #{items} - still need #{answer}"
+	elsif items == answer 
+		puts "This is the #{answer} you're looking for"
 	end
 end
 
@@ -131,7 +133,13 @@ puts "\n\n" #Seperate answers out
 # "Dodo"
 # "Saiga Antelope"
 # Do not use any special built-in methods.
-# ----
+
+extinct_animals.each do |key, value|
+	if extinct_animals[key] == "Andean Cat"
+		print "That exists!"
+	else print "That does not exist"
+	end
+end
 
 # 5. We just found out that the Passenger Pigeon is actually not extinct!
 # Remove them from extinct_animals and return the key value pair as a two item array.
