@@ -156,15 +156,37 @@ puts "\n\n" #Seperate answers out
 # "Saiga Antelope"
 # Do not use any special built-in methods.
 
-extinct_animals.each do |key, value|
-	if extinct_animals[key] == "Andean Cat"
-		print "That exists!"
-	else print "That does not exist"
+puts "Hash Drill 4: Check for extinct animals"
+
+check_extinct_animals = ["Andean Cat", "Dodo", "Saiga Antelope"]
+animals_test = false
+
+extinct_animals.each do |key1, value1|
+	check_extinct_animals.each do |key2, value2|
+		if key1 ==  key2
+			animals_test = true
+		elsif key1 != key2
+			animals_test = false
+		end
+		p animals_test
+		if animals_test == true
+			puts "The #{key2} is extinct"
+		end
 	end
 end
+
+
+puts "\n\n" #Seperate answers out	
 
 # 5. We just found out that the Passenger Pigeon is actually not extinct!
 # Remove them from extinct_animals and return the key value pair as a two item array.
 # Find the built-in method that helps you accomplish this in the Ruby documentation
 # for Hashes.
-# ----
+
+puts "Hash Drill 5: Return Passenger Pigeon"
+pigeon_not_extinct = []
+extinct_animals.each do |animals|
+	pigeon_not_extinct << animals
+	pigeon_not_extinct.delete_if {|key, value| key !="Passenger Pigeon"}
+end
+p pigeon_not_extinct.flatten
