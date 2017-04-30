@@ -15,10 +15,28 @@ puts "\n\n" #Seperate answers out
 #2. In order to keep yourself organized, sort your zombie_apocalypse_supplies 
 #in alphabetical order. Do not use any special built-in methods.'
 
-zombie_apocalypse_supplies.each do |item1, item2|
-	puts item2
+puts "Drill 2: Sort the array"
+def zombie_sort(zombie_apocalypse_supplies)
+	zombie_length = zombie_apocalypse_supplies.length
+	loop do
+		zombie_swap = false
 
+		(zombie_length - 1).times do |num|
+			if zombie_apocalypse_supplies[num] > zombie_apocalypse_supplies[num + 1]
+				zombie_apocalypse_supplies[num], zombie_apocalypse_supplies[num + 1] = zombie_apocalypse_supplies[num + 1], zombie_apocalypse_supplies[num]
+				zombie_swap = true
+			end
+		end
+		
+		break if zombie_swap == false
+
+	end
+	
+	return zombie_apocalypse_supplies
 end
+
+puts zombie_sort(zombie_apocalypse_supplies)
+puts "\n\n" #Seperate answers out
 
 #3. Create a method to see if a particular item (string) is in the 
 #zombie_apocalypse_supplies. Do not use any special built-in methods.'
