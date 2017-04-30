@@ -3,8 +3,7 @@
 zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
                               "shotgun", "compass", "CB radio", "batteries"]
 
-# 1. Iterate through the zombie_apocalypse_supplies array,
-# printing each item in the array separated by an asterisk
+puts '1. Iterate through the zombie_apocalypse_supplies array printing each item in the array separated by an asterisk'
 
 zombie_apocalypse_supplies.each do |items|
 	print items, " * "
@@ -12,21 +11,26 @@ end
 
 puts "\n\n" #Seperate answers out
 
-# 2. In order to keep yourself organized, sort your zombie_apocalypse_supplies
-# in alphabetical order. Do not use any special built-in methods.
+puts '2. In order to keep yourself organized, sort your zombie_apocalypse_supplies in alphabetical order. Do not use any special built-in methods.'
 #zombie_apocalypse_supplies.each do |item1, item2|
 #	 puts item1 <=> item2
 
 #end
 
-# 3. Create a method to see if a particular item (string) is in the
-# zombie_apocalypse_supplies. Do not use any special built-in methods.
+puts '3. Create a method to see if a particular item (string) is in the zombie_apocalypse_supplies. Do not use any special built-in methods.'
 # For instance: are boots in your list of supplies?
-# ----
+puts "Check for an item"
+answer = gets.chomp.downcase
 
-# 4. You can't carry too many things, you've only got room in your pack for 5.
-# Remove items in your zombie_apocalypse_supplies in any way you'd like,
-# leaving only 5. Do not use any special built-in methods.
+zombie_apocalypse_supplies.map do |items|
+	if items != answer
+		puts "You need this item"
+	end
+end
+
+puts "\n\n" #Seperate answers out		
+
+puts "4. You can't carry too many things, you've only got room in your pack for 5 Remove items leaving only 5."
 new_bag = []
 trash = []
 
