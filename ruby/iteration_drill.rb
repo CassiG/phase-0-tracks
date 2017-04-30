@@ -14,11 +14,11 @@ puts "\n\n" #Seperate answers out
 
 #2. In order to keep yourself organized, sort your zombie_apocalypse_supplies 
 #in alphabetical order. Do not use any special built-in methods.'
-#zombie_apocalypse_supplies.each do |item1, item2|
 
-#	 puts item1 <=> item2
+zombie_apocalypse_supplies.each do |item1, item2|
+	puts item2
 
-#end
+end
 
 #3. Create a method to see if a particular item (string) is in the 
 #zombie_apocalypse_supplies. Do not use any special built-in methods.'
