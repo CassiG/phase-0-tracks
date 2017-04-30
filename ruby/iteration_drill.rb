@@ -5,11 +5,22 @@ zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
 
 # 1. Iterate through the zombie_apocalypse_supplies array,
 # printing each item in the array separated by an asterisk
-# ----
+
+zombie_apocalypse_supplies.each do |items|
+	print items, " * "
+end
+
+puts "\n\n" #Seperate answers out
 
 # 2. In order to keep yourself organized, sort your zombie_apocalypse_supplies
 # in alphabetical order. Do not use any special built-in methods.
-# ----
+#zombie_apocalypse_supplies.each do |item1, item2|
+#	if item1 > item2
+#		puts item1
+#	elsif
+#		puts item2
+#	end
+#end
 
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
@@ -28,7 +39,8 @@ zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
 # documentation for Arrays.
 other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
                             "solar battery", "flashlight"]
-# ----
+
+ print zombie_apocalypse_supplies.concat(other_survivor_supplies).uniq
 
 # Hash Drills
 
