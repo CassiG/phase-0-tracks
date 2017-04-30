@@ -14,13 +14,10 @@ puts "\n\n" #Seperate answers out
 
 # 2. In order to keep yourself organized, sort your zombie_apocalypse_supplies
 # in alphabetical order. Do not use any special built-in methods.
-#zombie_apocalypse_supplies.each do |item1, item2|
-#	if item1 > item2
-#		puts item1
-#	elsif
-#		puts item2
-#	end
-#end
+zombie_apocalypse_supplies.each do |item1, item2|
+	 puts item1 <=> item2
+
+end
 
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
@@ -30,13 +27,25 @@ puts "\n\n" #Seperate answers out
 # 4. You can't carry too many things, you've only got room in your pack for 5.
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
 # leaving only 5. Do not use any special built-in methods.
-# ----
+new_bag = []
+trash = []
+
+zombie_apocalypse_supplies.each do |items|
+	if items.to_i >= 9
+		items << trash
+	elsif items.to_i < 9
+		items << new_bag
+	end
+end
+
+print new_bag
 
 # 5. You found another survivor! This means you can combine your supplies.
 # Create a new combined supplies list out of your zombie_apocalypse_supplies
 # and their supplies below. You should get rid of any duplicate items.
 # Find the built-in method that helps you accomplish this in the Ruby
 # documentation for Arrays.
+
 other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
                             "solar battery", "flashlight"]
 
