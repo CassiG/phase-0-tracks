@@ -190,3 +190,4 @@ extinct_animals.each do |animals|
 	pigeon_not_extinct.delete_if {|key, value| key !="Passenger Pigeon"}
 end
 p pigeon_not_extinct.flatten
+p extinct_animals
