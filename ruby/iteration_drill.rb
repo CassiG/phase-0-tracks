@@ -168,7 +168,6 @@ extinct_animals.each do |key1, value1|
 		elsif key1 != key2
 			animals_test = false
 		end
-		p animals_test
 		if animals_test == true
 			puts "The #{key2} is extinct"
 		end
