@@ -1,3 +1,5 @@
+#Pair programming Andrea Scott and Cassi Gallagher
+
 class Puppy
 
   def fetch(toy)
