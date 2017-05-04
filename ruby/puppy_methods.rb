@@ -37,3 +37,31 @@ class Puppy
   end
 
 end
+
+# release 2 class
+
+class Ikea
+
+  def initialize
+    puts "Congratulations! You're about to spend your entire weekend assembling furniture!"
+  end
+
+  def shop(furniture)
+    puts "You picked up the last #{furniture}!"
+  end
+
+  def meatballs(num)
+    cost = num * 0.03
+    puts "Score! You just got #{num} meatballs for $#{cost}!"
+  end
+  
+  def instructions
+    puts "Try turning the diagram upside down and reading it that way."
+  end
+
+  def assembly (num)
+    (num-1).times { puts "The allen wrench is around here somewhere!" }
+    puts "Found it!"
+  end
+
+end
