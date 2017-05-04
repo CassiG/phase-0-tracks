@@ -65,3 +65,43 @@ class Ikea
   end
 
 end
+
+
+
+#Puppy Driver code
+
+bandit = Puppy.new
+bandit.fetch("squeaky toy")
+bandit.speak(1)
+bandit.rollover
+bandit.dogyears(3)
+puts "How many high-fives do you want from the puppy?"
+  highfive_num = gets.chomp.to_i
+bandit.highfive(highfive_num)
+
+
+
+# Ikea driver code
+
+#method testing
+#saturday = Ikea.new
+#saturday.shop("GRUNDTAL/NORRVIKEN")
+#saturday.meatballs(10)
+#saturday.instructions
+#saturday.assembly(4)
+
+#release 2
+ikea_array = []
+
+50.times do
+
+ikea_array << Ikea.new
+
+end
+
+ikea_array.each { |i|
+  i.shop("GRUNDTAL/NORRVIKEN")
+  i.meatballs(1)
+  i.instructions
+  i.assembly(2)
+}
