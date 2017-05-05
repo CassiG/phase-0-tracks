@@ -16,8 +16,6 @@ class Santa
 	end
 end
 
-santa = Santa.new
+santa = Santa.new("Female", "Asian")
 santa.speak
 santa.eat_milk_and_cookies("snickerdoodle")
-santa.reindeer_ranking
-santa.age
