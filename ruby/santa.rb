@@ -3,6 +3,8 @@ class Santa
 		puts "Initializing Santa instance ..."
 		@gender	= gender
 		@ethnicity = ethnicity
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
 	end
 	
 	def speak
@@ -17,3 +19,5 @@ end
 santa = Santa.new
 santa.speak
 santa.eat_milk_and_cookies("snickerdoodle")
+santa.reindeer_ranking
+santa.age
