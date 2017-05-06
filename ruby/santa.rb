@@ -14,7 +14,7 @@ class Santa
 		@age
 	end
 
-	#gets_mad_at argument
+	#gets_mad_at argument X
 	#set that method so you can write it later
 	#create a method that takes a reindeers name as an argument
 	#iterate through the ranking
