@@ -1,7 +1,11 @@
 
 class Santa	
 
-	#Release 1 | Give Santa Attributes
+#Release 2 | Refractor Code
+	attr_accessor :age, :ethnicity
+	attr_accessor :gender
+
+#Release 1 | Give Santa Attributes
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance ..."
 		@gender	= gender
@@ -10,7 +14,7 @@ class Santa
 		@age = 0
 	end
 
-	#Release 0 Methods | Bring Santa to Life
+#Release 0 Methods | Bring Santa to Life
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
 	end
@@ -23,17 +27,17 @@ class Santa
 		puts "This santa listed they are #{@gender} and #{@ethnicity} on their employment diversity form"
 	end
 
-	#Release 2 | Change Attributes Outside of Class
-	def age 
+#Release 2 | Change Attributes Outside of Class
+	def celebrate_birthday 
 		@age + 1
 	end
 
-	#Create a method that takes a bad reindeer's name (trouble)
-	#Within that method do the following: 
-		#Loop through each reindeer. |good|
-		#If the bad reindeer's name (trouble) equals one of the reindeer's names |good|
-		#Take that reindeer's index and make it the last index (-1)
-		#Print new array
+#Create a method that takes a bad reindeer's name (trouble)
+#Within that method do the following: 
+	#Loop through each reindeer. |good|
+	#If the bad reindeer's name (trouble) equals one of the reindeer's names |good|
+	#Take out the bad reindeer (he needs some time alone to think about what he did	#Reenter him into the array, which will put him at the end. 
+	#Print new array
 	def get_mad_at(trouble)
 		@reindeer_ranking.each do |good|
 			if trouble == good
@@ -43,15 +47,23 @@ class Santa
 		end
 	end
 
-	#getter & setter method 
+#getter & setter method to update gender outside of the class
+#remove getter and setters with new attr_accessor 
+	#def age
+		#@age
+	#end
 
-	def gender
-		@gender
-	end
+	#def ethnicity
+	#	@ethnicity
+	#end
 
-	def gender=(new_gender)
-		@gender = new_gender
-	end
+	#def gender
+		#@gender
+	#end
+
+	#def gender=(new_gender)
+	#	@gender = new_gender
+	#end
 end
 
 #Release 0 Driver Code
@@ -72,13 +84,13 @@ end
 	#end
 
 #Release 2 Driver Code
-puts "Santa is now #{santa.age} old"
+	puts "Santa is now #{santa.celebrate_birthday} year old"
 
-p santa.get_mad_at("Vixen")
-p santa.get_mad_at("Rudolph")
+	p santa.get_mad_at("Vixen")
+	p santa.get_mad_at("Rudolph")
 
-print "Santa's gender is #{santa.gender}, "
-santa.gender = "Magic"
-print "but also Santa's gender is #{santa.gender}"
+	print "Santa's gender is #{santa.gender}, "
+	santa.gender = "Magic"
+	puts "but also Santa's gender is #{santa.gender}"
 
-
+	puts "Santa is really #{santa.age} years old and identifies as #{santa.ethnicity}"
