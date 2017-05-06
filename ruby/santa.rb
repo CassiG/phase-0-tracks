@@ -24,9 +24,8 @@ class Santa
 	end
 
 	#Release 2 | Change Attributes Outside of Class
-	#getter methods
 	def age 
-		@age
+		@age + 1
 	end
 
 	#Create a method that takes a bad reindeer's name (trouble)
@@ -44,11 +43,15 @@ class Santa
 		end
 	end
 
-	#setter method 
-	def age=(new_age)
-		@age = new_age
+	#getter & setter method 
+
+	def gender
+		@gender
 	end
-	
+
+	def gender=(new_gender)
+		@gender = new_gender
+	end
 end
 
 #Release 0 Driver Code
@@ -69,10 +72,13 @@ end
 	#end
 
 #Release 2 Driver Code
-santa.age = santa.age + 1
 puts "Santa is now #{santa.age} old"
 
 p santa.get_mad_at("Vixen")
 p santa.get_mad_at("Rudolph")
+
+print "Santa's gender is #{santa.gender}, "
+santa.gender = "Magic"
+print "but also Santa's gender is #{santa.gender}"
 
 
