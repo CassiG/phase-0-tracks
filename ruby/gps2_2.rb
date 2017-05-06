@@ -39,10 +39,11 @@ Welcome to ShppNgLst! Silicon Valley's newest startup with no vowels!!!
 Why carry a simple piece of paper when you can show off with your phone?
                              ShppNgLst."
 
-initial_quantity = 0
-shopping_list = {}
 
 def list_additem()
+  initial_quantity = 0
+  shopping_list = {}
+
   puts 'Type "done" when you\'ve finished adding to your list.'
   name_input = ""
   while name_input != "done"
@@ -90,6 +91,8 @@ def list_moditem(name_modif)
 end
 
 puts "Let's begin with a new list."
+
+puts list_additem
 
 #def item_delete(list_item)
 #shopping_list = {
