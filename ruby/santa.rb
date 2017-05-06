@@ -66,34 +66,35 @@ class Santa
 	#end
 end
 
+santa = Santa.new("Lady Santa", "Santa") #Initialize Santa
+
 #Release 0 Driver Code
-	santa = Santa.new("Lady Santa", "Santa")
-	#santa.speak
-	#santa.eat_milk_and_cookies("snickerdoodle")
+	santa.speak
+	santa.eat_milk_and_cookies("snickerdoodle")
 
 #Release 1 Driver Code 
-	#santas = []
-	#santa_diversity = [["Female", "Asian"], ["Male", "Latino"], ["Non-binary", "Caucasian"], ["Prefer not to say", "Mixed"]]
+	santas = []
+	santa_diversity = [["Female", "Asian"], ["Male", "Latino"], ["Non-binary", "Caucasian"], ["Prefer not to say", "Mixed"]]
 
-	#santa_diversity.each do |gender, ethnicity|
-	#		santas << Santa.new(gender, ethnicity)
-	#end
+	santa_diversity.each do |gender, ethnicity|
+		santas << Santa.new(gender, ethnicity)
+	end
 
-	#santas.each do |santa|
-	#	santa.diversity
-	#end
+	santas.each do |santa|
+		santa.diversity
+	end
 
 #Release 2 Driver Code
-	#puts "Santa is now #{santa.celebrate_birthday} year old"
+	puts "Santa is now #{santa.celebrate_birthday} year old"
 
-	#p santa.get_mad_at("Vixen")
-	#p santa.get_mad_at("Rudolph")
+	p santa.get_mad_at("Vixen")
+	p santa.get_mad_at("Rudolph")
 
-	#print "Santa's gender is #{santa.gender}, "
-	#santa.gender = "Magic"
-	#puts "but also Santa's gender is #{santa.gender}"
+	print "Santa's gender is #{santa.gender}, "
+	santa.gender = "Magic"
+	puts "but also Santa's gender is #{santa.gender}"
 
-	#puts "Santa is really #{santa.age} years old and identifies as #{santa.ethnicity}"
+	puts "Santa is really #{santa.age} years old and identifies as #{santa.ethnicity}"
 
 #Release 3 | Create a lot of santas
 	santa.gender = ["Female", "Male", "Santa", "Non-binary", "Genderless", "Magic", "Lady Santa", "Male Santa"]
