@@ -91,3 +91,17 @@ end
 
 puts "Let's begin with a new list."
 
+#def item_delete(list_item)
+#shopping_list = {
+#    "carrots" => 2,
+#    "onions" => 3,
+#    "tomato" => 1
+#  }
+
+#p shopping_list
+#shopping_list["carrots"] = 5
+#p shopping_list
+#shopping_list.delete("carrots")
+#p shopping_list
+#
+#shopping_list.each{|key, value| p "You need to buy #{value} #{key}."}
