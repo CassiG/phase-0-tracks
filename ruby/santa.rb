@@ -1,5 +1,7 @@
 
 class Santa	
+
+	#Release 1 | Give Santa Attributes
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance ..."
 		@gender	= gender
@@ -8,32 +10,7 @@ class Santa
 		@age = 0
 	end
 
-
-	#getter methods
-	def age 
-		@age
-	end
-
-	#gets_mad_at argument X
-	#set that method so you can write it later
-	#create a method that takes a reindeers name as an argument
-	#iterate through the ranking
-	#if the agrgument equals the name of variable iterating through	
-	#shift  that name to the back 
-
-	def get_mad_at
-		@reindeer_ranking
-	end
-
-	#setter method 
-	def age=(new_age)
-		@age = new_age
-	end
-
-	def get_mad_at=(new_order)
-		@reindeer_ranking = new_order
-	end
-	
+	#Release 0 Methods | Bring Santa to Life
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
 	end
@@ -45,32 +22,57 @@ class Santa
 	def diversity
 		puts "This santa listed they are #{@gender} and #{@ethnicity} on their employment diversity form"
 	end
+
+	#Release 2 | Change Attributes Outside of Class
+	#getter methods
+	def age 
+		@age
+	end
+
+	#Create a method that takes a bad reindeer's name (trouble)
+	#Within that method do the following: 
+		#Loop through each reindeer. |good|
+		#If the bad reindeer's name (trouble) equals one of the reindeer's names |good|
+		#Take that reindeer's index and make it the last index (-1)
+		#Print new array
+	def get_mad_at(trouble)
+		@reindeer_ranking.each do |good|
+			if trouble == good
+				bad_reindeer = @reindeer_ranking.delete(good)
+				@reindeer_ranking << bad_reindeer
+			end
+		end
+	end
+
+	#setter method 
+	def age=(new_age)
+		@age = new_age
+	end
+	
 end
 
-#Release 0 Initial Method Calls
-santa = Santa.new("Lady Santa", "Santa")
-#santa.speak
-#santa.eat_milk_and_cookies("snickerdoodle")
+#Release 0 Driver Code
+	santa = Santa.new("Lady Santa", "Santa")
+	#santa.speak
+	#santa.eat_milk_and_cookies("snickerdoodle")
 
-#Release 1 Adding Santa Attributes 
-#santas = []
-#santa_diversity = [["Female", "Asian"], ["Male", "Latino"], ["Non-binary", "Caucasian"], ["Prefer not to say", "Mixed"]]
+#Release 1 Driver Code 
+	#santas = []
+	#santa_diversity = [["Female", "Asian"], ["Male", "Latino"], ["Non-binary", "Caucasian"], ["Prefer not to say", "Mixed"]]
 
-#santa_diversity.each do |gender, ethnicity|
-	#	santas << Santa.new(gender, ethnicity)
-#end
+	#santa_diversity.each do |gender, ethnicity|
+		#	santas << Santa.new(gender, ethnicity)
+	#end
 
-#santas.each do |santa|
-#	santa.diversity
-#end
+	#santas.each do |santa|
+	#	santa.diversity
+	#end
 
-#Release 2 Changing Attributes with a method
-
+#Release 2 Driver Code
 santa.age = santa.age + 1
 puts "Santa is now #{santa.age} old"
 
-#create an array to put the 
-santa.get_mad_at = santa.get_mad_at.rotate
-puts "The new order is now #{santa.get_mad_at}"
+p santa.get_mad_at("Vixen")
+p santa.get_mad_at("Rudolph")
 
 
