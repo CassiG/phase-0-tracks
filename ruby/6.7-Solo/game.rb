@@ -32,5 +32,9 @@ class GuessingGame
 		@p1_word = "testing"
 	end
 
+	def p1_word_split
+		@p1_word.split('')
+	end
+
 end
 
