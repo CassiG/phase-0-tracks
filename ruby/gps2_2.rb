@@ -40,10 +40,11 @@ Why carry a simple piece of paper when you can show off with your phone?
                              ShppNgLst."
 
 initial_quantity = 0
-shopping_list = {}
 
-def list_additem(shopping_list)
 
+def list_additem
+  name_input = ""
+  shopping_list = {}
   puts 'Type "done" when you\'ve finished adding to your list.'
   while name_input != "done"
     puts "Enter an item for the ShppNgLst."
@@ -52,28 +53,19 @@ def list_additem(shopping_list)
     puts "Enter a quantity for that ShppNgLst item."
     quantity_input = gets.chomp
 
-    shopping_list << [name_input, quantity_input]
+    shopping_list[name_input] = quantity_input
   end
+  return shopping_list
 end
 
-p list_additem(shopping_list)
+groceries = list_additem
 
 
-def list_remitem(name_remov)
-  puts 'Type "done" when you\'ve finished removing items from your list.'
-  name_remov = ""
-
-  while name_remov != "done"
-
-    puts "Name an item to remove from your ShppNgLst."
-    name_remov = gets.chomp
-    break if name_remov == "done"
-
-    shopping_list.delete(name_remov)
-  end
-
-  shopping_list.each{|key, value| p "You need to buy #{value} #{key}."}
+def list_remitem(groceries)
+  groceries = groceries.delete("carrots")
 end
+
+p list_remitem(groceries)
 
 def list_moditem(name_modif)
   puts 'Type "done" when you\'ve finished removing items from your list.'
@@ -93,7 +85,6 @@ end
 
 puts "Let's begin with a new list."
 
-puts shopping_list
 
 #def item_delete(list_item)
 #shopping_list = {
