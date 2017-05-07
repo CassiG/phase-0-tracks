@@ -5,7 +5,15 @@ module Flight
 end
 
 class Bird
+	include Flight
 end
 
 class Plane
+	include Flight
 end
+
+bird = Bird.new
+puts bird.take_off(3000)
+
+plane = Plane.new
+puts plane.take_off(100)
