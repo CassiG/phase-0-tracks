@@ -39,13 +39,13 @@ Welcome to ShppNgLst! Silicon Valley's newest startup with no vowels!!!
 Why carry a simple piece of paper when you can show off with your phone?
                              ShppNgLst."
 
+initial_quantity = 0
 
-def list_additem()
-  initial_quantity = 0
-  shopping_list = {}
 
-  puts 'Type "done" when you\'ve finished adding to your list.'
+def list_additem
   name_input = ""
+  shopping_list = {}
+  puts 'Type "done" when you\'ve finished adding to your list.'
   while name_input != "done"
     puts "Enter an item for the ShppNgLst."
     name_input = gets.chomp
@@ -55,10 +55,12 @@ def list_additem()
 
     shopping_list[name_input] = quantity_input
   end
-  puts shopping_list
+  return shopping_list
 end
 
-def list_remitem(name_remov)
+groceries = list_additem
+
+def list_remitem(groceries)
   puts 'Type "done" when you\'ve finished removing items from your list.'
   name_remov = ""
 
@@ -68,10 +70,10 @@ def list_remitem(name_remov)
     name_remov = gets.chomp
     break if name_remov == "done"
 
-    shopping_list.delete(name_remov)
-  end
+    item = groceries.delete(name_remov)
 
-  shopping_list.each{|key, value| p "You need to buy #{value} #{key}."}
+  end
+  return groceries
 end
 
 def list_moditem(name_modif)
@@ -87,12 +89,13 @@ def list_moditem(name_modif)
     shopping_list.delete(name_modif)
   end
 
-  shopping_list.each{|key, value| p "You need to buy #{value} #{key}."}
 end
 
 puts "Let's begin with a new list."
+p list_remitem(groceries)
 
-puts list_additem
+groceries.each{|key, value| p "You need to buy #{value} #{key}."}
+
 
 #def item_delete(list_item)
 #shopping_list = {
