@@ -39,13 +39,12 @@ Welcome to ShppNgLst! Silicon Valley's newest startup with no vowels!!!
 Why carry a simple piece of paper when you can show off with your phone?
                              ShppNgLst."
 
+initial_quantity = 0
+shopping_list = {}
 
-def list_additem()
-  initial_quantity = 0
-  shopping_list = {}
+def list_additem(shopping_list)
 
   puts 'Type "done" when you\'ve finished adding to your list.'
-  name_input = ""
   while name_input != "done"
     puts "Enter an item for the ShppNgLst."
     name_input = gets.chomp
@@ -53,10 +52,12 @@ def list_additem()
     puts "Enter a quantity for that ShppNgLst item."
     quantity_input = gets.chomp
 
-    shopping_list[name_input] = quantity_input
+    shopping_list << [name_input, quantity_input]
   end
-  puts shopping_list
 end
+
+p list_additem(shopping_list)
+
 
 def list_remitem(name_remov)
   puts 'Type "done" when you\'ve finished removing items from your list.'
@@ -92,7 +93,7 @@ end
 
 puts "Let's begin with a new list."
 
-puts list_additem
+puts shopping_list
 
 #def item_delete(list_item)
 #shopping_list = {
