@@ -26,10 +26,11 @@
 
 class GuessingGame
 
-	attr_accessor :p1_word
+	attr_accessor :p1_word, :p2_guess
 
 	def initialize
 		@p1_word = "testing"
+		@p2_guess = "t"
 	end
 
 	def p1_word_split
