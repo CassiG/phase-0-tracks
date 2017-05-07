@@ -26,4 +26,11 @@
 
 class GuessingGame
 
+	attr_accessor :p1_word
+
+	def initialize
+		@p1_word = "testing"
+	end
+
 end
+
