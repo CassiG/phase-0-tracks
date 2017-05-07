@@ -33,9 +33,20 @@ class GuessingGame
 		@p2_guess = "t"
 	end
 
-	def p1_word_split
-		@p1_word.split('')
+	def new_game
+		index = 0
+		guess = ""
+		while index < @p1_word.length
+			if @p1_word.fetch(index) == @p2_guess
+				print @p2_guess
+			elsif @p1_word.fetch(index) != @p2_guess
+				print " _ "
+			end
+			index += 1
+		end
 	end
 
 end
+
+p new_game
 
