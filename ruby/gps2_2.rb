@@ -60,12 +60,21 @@ end
 
 groceries = list_additem
 
-
 def list_remitem(groceries)
-  groceries = groceries.delete("carrots")
-end
+  puts 'Type "done" when you\'ve finished removing items from your list.'
+  name_remov = ""
 
-p list_remitem(groceries)
+  while name_remov != "done"
+
+    puts "Name an item to remove from your ShppNgLst."
+    name_remov = gets.chomp
+    break if name_remov == "done"
+
+    item = groceries.delete(name_remov)
+
+  end
+  return groceries
+end
 
 def list_moditem(name_modif)
   puts 'Type "done" when you\'ve finished removing items from your list.'
@@ -80,10 +89,12 @@ def list_moditem(name_modif)
     shopping_list.delete(name_modif)
   end
 
-  shopping_list.each{|key, value| p "You need to buy #{value} #{key}."}
 end
 
 puts "Let's begin with a new list."
+p list_remitem(groceries)
+
+groceries.each{|key, value| p "You need to buy #{value} #{key}."}
 
 
 #def item_delete(list_item)
