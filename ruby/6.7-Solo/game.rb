@@ -23,3 +23,7 @@
 #else print you loose
 
 ##
+
+class GuessingGame
+
+end
