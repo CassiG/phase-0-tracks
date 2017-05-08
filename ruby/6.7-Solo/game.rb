@@ -26,6 +26,7 @@
 		#lose
 ## Attempted to anticpiate if the letters were not in the correct order but got stalled on the logic of this
 
+## BEGIN GAME LOGIC
 
 class GuessingGame
 
@@ -58,16 +59,16 @@ class GuessingGame
 	end
 
 	def win_game
-		while guess_count <= @p1_word.length
-			if @p1_word.join == @p2_word.join
-				p "Congratulations - you win the game."
-			else
-				p "Well, this is awkward...LOSE"
-			end
-			guess_count += 1
+		if @p1_word.join == @p2_word.join
+			p "Congratulations - you win the game."
+		else
+			p "Well, this is awkward...LOSE"
 		end
 	end
 end
+
+## BEGIN GAME INTERFACE
+puts 'Welcome to WordGuessGame - the game that is definitely not hangman, but totally our own thing'
 
 game = GuessingGame.new
 puts "Player 1 Please enter a word"
