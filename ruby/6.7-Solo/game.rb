@@ -16,34 +16,62 @@
 			#store that letter in an array
 		#else
 			#print a " _ "
+#While the game is less than the length of the array
+	#if the player 1 word and the player 2 word is correct
+	#win!
+	#else
+	#lose
 
 
 
 class GuessingGame
 
-	attr_reader :p1_word, :p2_guess, :p2_word
+	attr_reader :p1_word, :p2_guess, :p2_word, :win_game, :guess_count, :p2_guesses
 
 	def initialize
 		@p1_word = ''
 		@p2_guess = ''
 		@p2_word = []
+		@win_game = false
+		@guess_count = 0
+		@p2_guesses = false
 	end
 
 	def p1_word
-		@p1_word = "test".split('')
+		@p1_word = gets.chomp.split('')
 	end
 
 	def p2_guess
-		@p2_guess = "t"
-		p1_word.each do |letter|
-			if @p2_guess == letter 
+		while @guess_count <= @p1_word.length
+			puts "Enter a letter"
+			@p2_guess = gets.chomp
+			if @p2_guess == p1_word[@guess_count] 
+				@p2_guesses = true
 				print @p2_guess
 				@p2_word << @p2_guess
-			else
+			elsif @p2_guess != @p1_word[@guess_count] 
+				
 				print ' _ '
+				break
+				@p2_guesses = false
 			end
-			return @p2_word
+		end
+		@guess_count += 1
+
+	end
+
+	def win_game
+		while guess_count <= @p1_word.length
+			if @p1_word.join == @p2_word.join
+				p "you win!"
+			else
+				p "you loose"
+			end
+			guess_count += 1
 		end
 	end
 end
 
+game = GuessingGame.new
+game.p1_word
+game.p2_guess
