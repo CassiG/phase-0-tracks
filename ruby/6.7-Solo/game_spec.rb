@@ -11,4 +11,8 @@ describe GuessingGame do
 		expect(game.p1_word).to eq ['t', 'e', 's', 't']
 	end
 
+	it "Makes sure the guessed letter is returned" do
+		expect(game.p2_guess).to eq ["t"]
+	end
+
 end
