@@ -42,22 +42,16 @@ class GuessingGame
 	end
 
 	def p2_guess
-		while @guess_count <= @p1_word.length
+		@p1_word.each do |letter|
 			puts "Enter a letter"
 			@p2_guess = gets.chomp
-			if @p2_guess == p1_word[@guess_count] 
-				@p2_guesses = true
-				print @p2_guess
+			if @p2_guess == letter 
+				puts "That letter is in the word"
 				@p2_word << @p2_guess
 			elsif @p2_guess != @p1_word[@guess_count] 
-				
-				print ' _ '
-				break
-				@p2_guesses = false
+				puts 'That letter is not in the word'
 			end
 		end
-		@guess_count += 1
-
 	end
 
 	def win_game
