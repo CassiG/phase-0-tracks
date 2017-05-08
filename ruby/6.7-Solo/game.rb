@@ -16,12 +16,15 @@
 			#store that letter in an array
 		#else
 			#print a " _ "
+
+## Attempted this but was having trouble implementing printing out something like _ _ _ _ t each time - subbing in text as an alternative for time purposes.
+
 #While the game is less than the length of the array
 	#if the player 1 word and the player 2 word is correct
-	#win!
+		#win!
 	#else
-	#lose
-
+		#lose
+## Attempted to anticpiate if the letters were not in the correct order but got stalled on the logic of this
 
 
 class GuessingGame
@@ -37,7 +40,7 @@ class GuessingGame
 		@p2_guesses = false
 	end
 
-	def p1_word
+	def p1_word_guess
 		@p1_word = gets.chomp.split('')
 	end
 
@@ -46,7 +49,7 @@ class GuessingGame
 			puts "Enter a letter"
 			@p2_guess = gets.chomp
 			if @p2_guess == letter 
-				puts "That letter is in the word"
+				puts "That letter is in the word" # 
 				@p2_word << @p2_guess
 			elsif @p2_guess != @p1_word[@guess_count] 
 				puts 'That letter is not in the word'
@@ -67,5 +70,9 @@ class GuessingGame
 end
 
 game = GuessingGame.new
+puts "Player 1 Please enter a word"
 game.p1_word
+
+puts "Player 2 please guess the word one letter at a time. You get #{game.p1_word_guess.length} guesses"
+
 game.p2_guess
