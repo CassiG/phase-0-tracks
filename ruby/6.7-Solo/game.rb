@@ -16,7 +16,12 @@ class GuessingGame
 	attr_reader :guess_word
 
 	def initialize
-		@guess_word = "test"
+		@guess_word = ""
+	end
+
+	def p1_word
+		@guess_word = "test".split('')
 	end
 
 end
+
