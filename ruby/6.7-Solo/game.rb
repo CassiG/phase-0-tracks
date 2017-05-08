@@ -28,7 +28,7 @@ class GuessingGame
 
 	def initialize
 		@p1_word = ""
-		@p2_guess = "t"
+		@p2_guess = ""
 		@guess_count = 0
 		@letter_correct = false
 		@win_game = false
@@ -51,14 +51,16 @@ class GuessingGame
 	end
 
 	def win_game
+
 		while @guess_count <= @p1_word.split('').length 
-			if @p1_word.join('') == answer.join('')
-				p = answer.join('')
+			if @p1_word == answer.join('')
+				@answer = true
 			else
 				false
 			end
-			guess_count += 1
+			@guess_count += 1
 		end
+
 	end
 
 end
@@ -68,10 +70,13 @@ game = GuessingGame.new
 puts "Player 1 enter a word"
 game.p1_word = gets.chomp
 
-p game.win_game
+while game.guess_count <= game.p1_word.split("")
+	puts "Player 2 guess a letter"
+	game.p2_guess = gets.chomp
+end
 
-while game.win_game == false
-	if game.check_letter == true
-		puts game.p2_guess
-	end
+if game.check_letter == true
+	puts game.p2_guess
+elsif puts = " _ "
+	
 end
