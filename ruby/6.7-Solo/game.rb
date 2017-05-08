@@ -14,6 +14,7 @@
 	#If that letter = the letter we’re on (from the loop)
 		#Print blank letters  "_" + then print correct letter + add'l blank letters "_”
 		#Else print all blank letters
+#Join the guesses into a word
 #If the joined answer = p1_word.joined && guess_count <= p1_word.length
 	#Congratulations!
 #If the joined answer does not equal p1_word.joined && guess_count = p1_word.length
@@ -26,17 +27,18 @@ class GuessingGame
 	attr_reader :guess_count, :letter_correct, :win_game
 
 	def initialize
-		@p1_word = "testing".split('')
+		@p1_word = @p1_word.split('')
 		@p2_guess = "t"
 		@guess_count = 0
 		@letter_correct = false
-		@win_game = 
+		@win_game = false
+		@answer = ['t', 'e', 's', 't', 'i', 'n', 'g']
 	end
 
 	def check_letter
 		@p1_word.each do |index|
 			if index == @p2_guess
-				letter_correct = true
+				@letter_correct = true
 			else 
 				false
 			end
@@ -44,7 +46,19 @@ class GuessingGame
 		end
 	end
 
+	def answer 
+		@answer << @p2_guess
+	end
+
 	def win_game
+		while @guess_count <= @p1_word.length 
+			if @p1_word.join == @answer.join 
+				@win_game = true
+			else
+				false
+			end
+
+		end
 	end
 
 end
