@@ -60,9 +60,9 @@ class GuessingGame
 	def win_game
 		while guess_count <= @p1_word.length
 			if @p1_word.join == @p2_word.join
-				p "you win!"
+				p "Congratulations - you win the game."
 			else
-				p "you loose"
+				p "Well, this is awkward...LOSE"
 			end
 			guess_count += 1
 		end
@@ -74,5 +74,6 @@ puts "Player 1 Please enter a word"
 game.p1_word
 
 puts "Player 2 please guess the word one letter at a time. You get #{game.p1_word_guess.length} guesses"
-
 game.p2_guess
+
+game.win_game
