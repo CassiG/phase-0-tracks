@@ -11,11 +11,15 @@ describe GuessingGame do
 		expect(game.p2_guess).to eq "t"
 	end
 
-	it "Stores the initial word as a split array" do
+	it "Refractor code from line 6 to stores the initial word as a split array" do
 		expect(game.p1_word).to eq ["t", 'e', 's', 't', 'i', 'n', 'g']
 	end
 
-	it "Checks to see if we can print array as blank list" do
-		expect(game.new_game).to eq "t _ _ t _ _ _"
+	it "Checks to see if guess letter matches a letter in the word" do
+		expect(game.check_letter).to be true
+	end
+
+	it "Checks to see if they got the answer within the amount of guesses provided" do
+		expect(game.win_game).to be true
 	end
 end
