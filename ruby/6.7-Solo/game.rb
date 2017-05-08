@@ -12,33 +12,33 @@
 	#Ask player 2 for a guess
 	#Let player 2 enter a letter
 		#if the letter == the first letter of guess_word
-			#print that letter
+			#shovel that letter into an array
 			#store that letter in an array
 		#else
-			#print a " _ "
+			#shovel " _ " into an array 
 
-## Attempted this but was having trouble implementing printing out something like _ _ _ _ t each time - subbing in text as an alternative for time purposes.
+## Attempted to deal with logic on if letter is guessed in the right order but got stalled on that
 
 #While the game is less than the length of the array
 	#if the player 1 word and the player 2 word is correct
 		#win!
 	#else
 		#lose
-## Attempted to anticpiate if the letters were not in the correct order but got stalled on the logic of this
+
 
 ## BEGIN GAME LOGIC
 
 class GuessingGame
 
-	attr_reader :p1_word, :p2_guess, :p2_word, :win_game, :guess_count, :p2_guesses
+	attr_reader :p1_word, :p2_guess, :p2_word, :guess_count, :p2_guesses, :letter_correct, :right_letter
 
 	def initialize
 		@p1_word = ''
 		@p2_guess = ''
 		@p2_word = []
-		@win_game = false
 		@guess_count = 0
 		@p2_guesses = false
+		@letter_correct = []
 	end
 
 	def p1_word_guess
@@ -46,15 +46,18 @@ class GuessingGame
 	end
 
 	def p2_guess
-		@p1_word.each do |letter|
+		@p1_word.map do |letter|
 			puts "Enter a letter"
 			@p2_guess = gets.chomp
 			if @p2_guess == letter 
 				puts "That letter is in the word" # 
 				@p2_word << @p2_guess
-			elsif @p2_guess != @p1_word[@guess_count] 
+				@letter_correct << @p2_guess
+			elsif @p2_guess != letter
 				puts 'That letter is not in the word'
+				@letter_correct << " _ "
 			end
+			p @letter_correct
 		end
 	end
 
