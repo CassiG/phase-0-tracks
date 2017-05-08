@@ -17,7 +17,7 @@
 		#else
 			#shovel " _ " into an array 
 
-## Attempted to deal with logic on if letter is guessed in the right order but got stalled on that
+## Attempted to deal with logic on if letter is guessed in the wrong order of the word but still is in the letter - got stalled on that
 
 #While the game is less than the length of the array
 	#if the player 1 word and the player 2 word is correct
