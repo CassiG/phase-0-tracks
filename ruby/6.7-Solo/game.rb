@@ -27,12 +27,12 @@ class GuessingGame
 	attr_reader :guess_count, :letter_correct, :win_game
 
 	def initialize
-		@p1_word = @p1_word.split('')
-		@p2_guess = "t"
+		@p1_word = p1_word.split('')
+		@p2_guess = @p2_guess
 		@guess_count = 0
 		@letter_correct = false
 		@win_game = false
-		@answer = ['t', 'e', 's', 't', 'i', 'n', 'g']
+		@answer = []
 	end
 
 	def check_letter
@@ -62,4 +62,9 @@ class GuessingGame
 	end
 
 end
+
+game = GuessingGame.new
+puts "Player 1 enter a word"
+game.p1_word = gets.chomp
+p game.p1_word
 
