@@ -10,12 +10,14 @@ require_relative 'state_data'
 
 class VirusPredictor
 
+#Initializing all the data into variables to be used throughout the code 
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+#Passing all the variables down to the other methods 
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
@@ -23,6 +25,7 @@ class VirusPredictor
 
   private
 
+#Calculating predicted deaths based on each state's population and population density - converts a number to a whole number if it is a float
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -40,6 +43,8 @@ class VirusPredictor
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
+
+#Calculating how fast the virus will spread based on each state's population density, the higher the density, faster it will go
 
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
