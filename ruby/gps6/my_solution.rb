@@ -4,7 +4,7 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+# Links ruby files - in this case it will give my_solution the ability to call on another file's data - in this case state data
 #
 require_relative 'state_data'
 
