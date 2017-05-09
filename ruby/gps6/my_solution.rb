@@ -122,3 +122,19 @@ end
 
 #=======================================================================
 # Reflection Section
+
+#What are the differences between the two different hash syntaxes shown in the state_data file?
+	#One is a regular hash with a key and a value, but the value is a hashy hash - a second hash that uses symbols
+
+#What does require_relative do? How is it different from require?
+	#require references modules that can be used for anything
+	#require_relative reference files in the same repo, often it's code that could be included in the original code but it's seperated out for readability
+
+#What are some ways to iterate through a hash?
+	#You can iterate using each_key, which specifically selects the key of a hash and assigns it to your block parameter 
+
+#When refactoring virus_effects, what stood out to you about the variables, if anything?
+	#The variables didn't need much code to them because most of the data was accessed through initialization
+
+#What concept did you most solidify in this challenge?
+	#This helped me understand initialization better, which I thought you just put every variable up there
