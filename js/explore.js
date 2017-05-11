@@ -8,9 +8,9 @@
 // Print string
 
 function reverseString(string) {
-	newString = ""
+	var newString = ""
 
-	for (i = (string.length -1); i >= 0; i--) {
+	for (var i = (string.length -1); i >= 0; i--) {
 		newString += string[i];
 	}
 
@@ -22,3 +22,15 @@ function reverseString(string) {
 reverseString("naan"); // See it works!
 reverseString("hello"); // Just kidding I'll try a real word
 reverseString("This is a whole string");
+
+// Create a conditional statment to run the code
+// If pigs can fly, run the code
+// else, break
+
+var pigs = "can fly"
+
+if (pigs == "can fly") {
+	console.log("I always knew pigs could fly, I'm so excited I'll yell it backwards") + reverseString("This is true!");
+} else {
+	console.log("Well if pigs can't fly, who can??");
+}
