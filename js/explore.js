@@ -5,3 +5,8 @@
 	// Create a loop counting backwards
 	// Assign the new string to each character of the current string, going backwards (string[i])
 	// Return the new string
+// Print string
+
+function reverseString(string) {
+	newString = ""
+}
