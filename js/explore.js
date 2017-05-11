@@ -13,10 +13,12 @@ function reverseString(string) {
 	for (i = (string.length -1); i >= 0; i--) {
 		newString += string[i];
 	}
-	
+
 	console.log(newString);
 }
 
 // Driver Code
 
-reverseString("hello");
+reverseString("naan"); // See it works!
+reverseString("hello"); // Just kidding I'll try a real word
+reverseString("This is a whole string");
