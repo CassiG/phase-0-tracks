@@ -12,10 +12,11 @@ function reverseString(string) {
 
 	for (i = (string.length -1); i >= 0; i--) {
 		newString += string[i];
-		return newString;
 	}
+	
+	console.log(newString);
 }
 
 // Driver Code
 
-console.log(reverseString("hello"))
+reverseString("hello");
