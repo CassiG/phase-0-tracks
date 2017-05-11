@@ -18,4 +18,4 @@ function reverseString(string) {
 
 // Driver Code
 
-// console.log("hello")
+console.log(reverseString("hello"))
