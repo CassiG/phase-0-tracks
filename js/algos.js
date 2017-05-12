@@ -8,7 +8,9 @@
 // Return the longest word or phrase in the array.
 
 function longestWord(array) {
-	console.log(array)
+	for (var i = 0; i < array.length; i++) {
+
+	}
 }
 
 longestWord(["Test", "Longer Word", "Longest Word"])
