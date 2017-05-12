@@ -6,3 +6,11 @@
 		// Check if that length of that item is longer than the length of the next item\
 		// If it is store it in the logest word array
 // Return the longest word or phrase in the array.
+
+function longestWord(array) {
+	console.log(array)
+}
+
+longestWord(["Test", "Longer Word", "Longest Word"])
+
+
