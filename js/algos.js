@@ -9,10 +9,10 @@
 
 function longestWord(array) {
 	for (var i = 0; i < array.length; i++) {
-
+		console.log((array[2].length)
 	}
 }
 
-longestWord(["Test", "Longer Word", "Longest Word"])
+longestWord(["Word", "Longer", "Longest Word (Cause it's a phrase)"])
 
 
