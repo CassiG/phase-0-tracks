@@ -28,3 +28,23 @@ function Car(color, type, fast) {
   this.burnout = function() {console.log("burning rubber!!!"); }; 
 
 }
+
+// Call the Car function
+
+var coolcar = new Car("red", "sports", true);
+console.log(coolcar);
+coolcar.burnout();
+
+
+var sedan = new Car("grey", "sedan", false);
+console.log(sedan);
+console.log("this car is lame because its a " + sedan.color + " " + sedan.type +".");
+
+
+var truck = new Car("yellow", "truck", false);
+console.log(truck);
+truck.fast = true;
+console.log("is this truck fast?:" + " " + truck.fast )
+
+for (var i = 0; i < 20; i++)
+	    console.log(new Car("red", "sports", true));
