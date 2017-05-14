@@ -19,8 +19,27 @@ function longestWord(array) {
 	} console.log(longWord);
 } 
 
-longestWord(["long phrase","longer phrase","longest phrase"])
-longestWord(["long phrase","longest phrase","longer phrase"]);
-longestWord(["longest phrase","long phrase","longer phrase"]);
+// RELEASE 1 | Create a function that takes two objects and checks to see if the objects share at least one key-value pair
+	// Loop through each object key/value pair using the for..in loop
+		// If the key in the first object matches the key in the second AND the value in the first object matches the value in the second object
+		// Return true
+		// Find out how to loop through two objects at the same time
 
+function keyValueMatch(obj1, obj2) {
+	for (var objVal in obj1) {
+
+	}
+}
+
+// DRIVER CODE
+
+// Release 0
+//longestWord(["long phrase","longer phrase","longest phrase"]);
+//longestWord(["long phrase","longest phrase","longer phrase"]);
+//longestWord(["longest phrase","long phrase","longer phrase"]);
+
+// Release 1
+keyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54});
+
+// Release 2
 
