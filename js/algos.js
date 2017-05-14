@@ -1,4 +1,4 @@
-// Algorithm Challenge 
+// Algorithm Challenge //
 
 // RELEASE 0 | Create a function that takes an array of words or phrases  
 	// Create an empty longest word string 
@@ -46,12 +46,17 @@ function keyValueMatch(obj1, obj2) {
 	} // end for for...each loops
 	
 	if (keyValueTrue === true){
+	  console.log("true")
 	  return true;
 	} else {
+	console.log("false")
 	  return false;
 	}
 } // end function
-// DRIVER CODE
+
+////////////////////////////////////
+
+// DRIVER CODE //
 
 // Release 0
 //longestWord(["long phrase","longer phrase","longest phrase"]);
@@ -59,9 +64,9 @@ function keyValueMatch(obj1, obj2) {
 //longestWord(["longest phrase","long phrase","longer phrase"]);
 
 // Release 1
-keyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}); #  true
-keyValueMatch({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}); #  true
-keyValueMatch({name: "Mary", age: 2}, {name: "Mar Mar", age: 70}); #  false
+keyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}); //  true
+keyValueMatch({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}); // true
+keyValueMatch({name: "Mary", age: 2}, {name: "Mar Mar", age: 70});  // false
 
 // Release 2
 
