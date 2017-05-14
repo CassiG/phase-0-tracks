@@ -26,8 +26,14 @@ function longestWord(array) {
 		// Find out how to loop through two objects at the same time
 
 function keyValueMatch(obj1, obj2) {
-	for (var objVal in obj1) {
+	for (var objVal1 in obj1) {
+		for(var objVal2 in obj2){
+			console.log(objVal1);
+			console.log(obj1[objVal1]);
+			console.log(objVal2);
+			console.log(obj2[objVal2]);
 
+		}
 	}
 }
 
