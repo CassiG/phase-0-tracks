@@ -20,22 +20,30 @@ function longestWord(array) {
 } 
 
 // RELEASE 1 | Create a function that takes two objects and checks to see if the objects share at least one key-value pair
-	// Loop through each object key/value pair using the for..in loop
-		// If the key in the first object matches the key in the second AND the value in the first object matches the value in the second object
+	// Loop through each object key/value pair using the for..in loop in the first object
+	// Loop through each object key/value pair using the for..in loop in the second object
+		// Within the two loops - if the key in the first object matches the key in the second 
+		//AND the value in the first object matches the value in the second object
 		// Return true
-		// Find out how to loop through two objects at the same time
+		// Logic of looping through twice:
+			// for {k1: v1, k2: v2}, {k3: v3, k4: v4}
+			// for {name: "Steven", age: 54}, {name: "Tamir", age: 54}
+			// Does k1 == k3 && does v1 == v3 - false
+			// Does k1 == k4 && does v1 == v4 - false
+			// Does k2 == k3 && does v2 == k3 - false
+			// Does k2 == k4 && does v2 == v4 - true
 
 function keyValueMatch(obj1, obj2) {
 	for (var objVal1 in obj1) {
 		for(var objVal2 in obj2){
-			console.log(objVal1);
-			console.log(obj1[objVal1]);
-			console.log(objVal2);
-			console.log(obj2[objVal2]);
-
-		}
-	}
-}
+			if (objVal1 == objVal2 && obj1[objVal1] == obj2[objVal2]) {
+				true
+			} else {
+				false
+				}
+		} // end for loop 2
+	} // end for loop 1
+} // end function
 
 // DRIVER CODE
 
