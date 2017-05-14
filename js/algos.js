@@ -32,19 +32,25 @@ function longestWord(array) {
 			// Does k1 == k4 && does v1 == v4 - false
 			// Does k2 == k3 && does v2 == k3 - false
 			// Does k2 == k4 && does v2 == v4 - true
+		// **Figure out how to loop through all senarios before returning false **Solved, because the if loop would break out of the loop as soon as it returns false (aka the first conditional), set it to update a variable that will collect the true return
 
 function keyValueMatch(obj1, obj2) {
+	var keyValueTrue = false;
+	
 	for (var objVal1 in obj1) {
 		for(var objVal2 in obj2){
 			if (objVal1 == objVal2 && obj1[objVal1] == obj2[objVal2]) {
-				true
-			} else {
-				false
-				}
-		} // end for loop 2
-	} // end for loop 1
+				keyValueTrue = true;
+			}
+		}
+	} // end for for...each loops
+	
+	if (keyValueTrue === true){
+	  return true;
+	} else {
+	  return false;
+	}
 } // end function
-
 // DRIVER CODE
 
 // Release 0
@@ -53,7 +59,9 @@ function keyValueMatch(obj1, obj2) {
 //longestWord(["longest phrase","long phrase","longer phrase"]);
 
 // Release 1
-keyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54});
+keyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}); #  true
+keyValueMatch({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}); #  true
+keyValueMatch({name: "Mary", age: 2}, {name: "Mar Mar", age: 70}); #  false
 
 // Release 2
 
