@@ -3,16 +3,23 @@
 // Create a function that takes an array of words or phrases  
 	// Create an empty longest word string 
 	// Loop through each array item. For each item 
-		// Check if that length of that item is longer than the length of the next item\
-		// If it is store it in the logest word array
-// Return the longest word or phrase in the array.
+		// Check it against the first word. If array[i] (the current word) is longer than the first word
+		// Store that word in a variable
+		// Else store the first word in a variable
+// Return the longest word variable
 
 function longestWord(array) {
+	var longWord = ""
 	for (var i = 0; i < array.length; i++) {
-		console.log((array[2].length)
-	}
+		if (array[i].length > array[0].length){
+			longWord = array[i]; 
+		} else {
+			longWord = array[0];
+		}console.log(longWord);
+
+	} 
 }
 
-longestWord(["Word", "Longer", "Longest Word (Cause it's a phrase)"])
+longestWord(["Word", "Longest Word (Cause it's a phrase)", "Longer"])
 
 
