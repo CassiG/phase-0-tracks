@@ -61,9 +61,10 @@ function keyValueMatch(obj1, obj2) {
  		//push a random string of characters in as an array item
 
  function randomWordArray(arrayNum) {
- 	console.log(parseInt(arrayNum));
+ 	var randArr = []
  	for (var i = 0; i < parseInt(arrayNum); i++) {
- 		console.log("test");
+ 		console.log(Math.floor(Math.random() * (10 - 1 + 1)) + 1);
+
  	}
  }
 
