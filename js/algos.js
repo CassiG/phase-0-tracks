@@ -55,7 +55,17 @@ function keyValueMatch(obj1, obj2) {
 } // end function
 
 // RELEASE 2 | Create a function that takes an integer and creates a random array of words (can be fantastical made up words - possibly from harry potter) of the given length. Each word should be randomly between 1 and 10 character
- 	// Cre
+ 	// Create a function that takes an integer
+ 	// Create an empty array to store the random array
+ 	// Loop through the empty array as many times as the number
+ 		//push a random string of characters in as an array item
+
+ function randomWordArray(arrayNum) {
+ 	console.log(parseInt(arrayNum));
+ 	for (var i = 0; i < parseInt(arrayNum); i++) {
+ 		console.log("test");
+ 	}
+ }
 
 
 //Write a function that takes an integer for length, and builds and returns an array of strings of the given length. So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
@@ -70,9 +80,9 @@ function keyValueMatch(obj1, obj2) {
 //longestWord(["longest phrase","long phrase","longer phrase"]);
 
 // Release 1
-keyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}); //  true
-keyValueMatch({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}); // true
-keyValueMatch({name: "Mary", age: 2}, {name: "Mar Mar", age: 70});  // false
+//keyValueMatch({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}); // true
+//keyValueMatch({name: "Mary", age: 2}, {name: "Mar Mar", age: 70});  // false
 
 // Release 2
+randomWordArray(3);
 
