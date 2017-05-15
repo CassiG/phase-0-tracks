@@ -76,7 +76,6 @@ function keyValueMatch(obj1, obj2) {
       	} 
  	    randArr.push(randNumArr);
  	}console.log(randArr);
- 
  	
  }
 
@@ -97,4 +96,5 @@ function keyValueMatch(obj1, obj2) {
 
 // Release 2
 randomWordArray(3);
+
 
