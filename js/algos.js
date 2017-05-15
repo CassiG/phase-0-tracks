@@ -57,17 +57,28 @@ function keyValueMatch(obj1, obj2) {
 // RELEASE 2 | Create a function that takes an integer and creates a random array of words (can be fantastical made up words - possibly from harry potter) of the given length. Each word should be randomly between 1 and 10 character
  	// Create a function that takes an integer
  	// Create an empty array to store the random array
+ 	// Create a second array to store an array of numbers made up of the intial random numbers
  	// Loop through the empty array as many times as the number
+ 		// Use math random technique to loop and create randomly gnerated numbers (up to 10) - as many as the argument
+ 			// For each of those number loop through again to make an array of numbers leading up to that one. (eg for (3, 4) it is [[1, 2, 3], [1, 2, 3, 4])
+ 		// Convert those numbers into a string using String.fromCharCode
  		//push a random string of characters in as an array item
 
  function randomWordArray(arrayNum) {
  	var randArr = []
+ 	var randNumArr = []
+ 	
  	for (var i = 0; i < parseInt(arrayNum); i++) {
- 		console.log(Math.floor(Math.random() * (10 - 1 + 1)) + 1);
-
- 	}
+ 		var randNum = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+ 		
+ 		for (x = 0; x < randNum; x++) {
+ 		    randNumArr.push(x);
+      	} 
+ 	    randArr.push(randNumArr);
+ 	}console.log(randArr);
+ 
+ 	
  }
-
 
 //Write a function that takes an integer for length, and builds and returns an array of strings of the given length. So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
 
