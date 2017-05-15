@@ -54,6 +54,12 @@ function keyValueMatch(obj1, obj2) {
 	}
 } // end function
 
+// RELEASE 2 | Create a function that takes an integer and creates a random array of words (can be fantastical made up words - possibly from harry potter) of the given length. Each word should be randomly between 1 and 10 character
+ 	// Cre
+
+
+//Write a function that takes an integer for length, and builds and returns an array of strings of the given length. So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
+
 ////////////////////////////////////
 
 // DRIVER CODE //
