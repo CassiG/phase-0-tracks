@@ -1,0 +1,29 @@
+1. Display the information in one table.
+
+## INPUT 
+sqlite> SELECT * FROM animals;
+
+## OUTPUT
+(ID, name, class_id, age, in_exhibit)
+1|Malayan Tiger|1|3|true
+2|Snowy Owl|2|20|false
+3|River Otter|1|1|true
+4|Red-Footed Tortise|3|10|true
+
+2. Update an item that meets some condition.
+
+# OWL is the only one not in their exhibit, move him to true
+
+## Input
+sqlite> UPDATE animals SET in_exhibit="true" WHERE name="Snowy Owl";
+sqlite> SELECT * FROM animals;
+
+## Output
+1|Malayan Tiger|1|3|true
+2|Snowy Owl|2|20|true
+3|River Otter|1|1|true
+4|Red-Footed Tortise|3|10|true
+
+Display the information in both tables using one query.
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+Delete an item that meets some condition (you can choose a condition that makes sense).
