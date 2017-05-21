@@ -6,7 +6,7 @@
 
 # Program: 
 # Create a database to store beer information
-# Ask the user if they'd like to enter a beer, delete a beer, or see the current beer calendar 
+# First create a program to ask user if they'd like to enter a beer, delete a beer, or see the current beer calendar 
 	# If they'd like to enter a beer
 		# Ask what kind of beer they'd like to make
 		# Ask for the name
@@ -41,3 +41,28 @@ homebrew_db.execute(create_table_cmd)
 
 #Test Beer
 #homebrew_db.execute('INSERT INTO homebrew (beer_type, name, brew_month, keg_month, is_ready_brew, is_ready_keg) VALUES ("IPA", "Hometown IPA", "May", "July", "true", "false")')
+
+# USER PROGRAM
+
+def begin_program 
+	answer = ''
+	while answer != 'exit' do
+		puts "Type 'enter' to enter a new beer, 'delete' to delete a beer, or 'view' to view the current beer calendar. Type 'exit' to exit program."
+		answer = gets.chomp.downcase
+
+		if answer == 'enter'
+			puts "Let's enter a beer\n\n"
+		elsif answer == 'delete'
+			puts "Let's delete a beer\n\n"
+		elsif answer == 'view'
+			puts "Let's view a beer\n\n"
+		elsif answer !='exit' && answer != 'enter' && answer != 'delete' && answer != 'view'
+			puts "Please enter one of the four choices\n\n"
+		end
+
+		break if answer == 'exit'
+	end	
+end
+
+# USER INTERFACE
+begin_program
