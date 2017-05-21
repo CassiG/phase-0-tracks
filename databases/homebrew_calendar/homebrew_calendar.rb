@@ -44,6 +44,10 @@ def enter_beer(homebrew_db, beer_type, name, brew_month, keg_month)
 	homebrew_db.execute("INSERT INTO homebrew (beer_type, name, brew_month, keg_month) VALUES (?, ?, ?, ?)", [beer_type, name, brew_month, keg_month] )
 end
 
+def delete_beer(homebrew_db, name)
+	homebrew_db.execute("DELETE FROM homebrew WHERE name=?", [name])
+end
+
 # Ask User to enter beer
 
 answer = ''	
@@ -73,6 +77,16 @@ while answer != 'exit' do
 			puts "Style: #{beers['beer_type']} | Name: #{beers['name']} | Brew Month: #{beers['brew_month']} | Keg Month: #{beers['keg_month']}"
 		end
 
+		puts "Enter the name of the beer you'd like to delete"
+		name = gets.chomp.downcase
+
+		delete_beer(homebrew_db, name)
+
+		new_list_beers = homebrew_db.execute("SELECT * FROM homebrew")
+
+		new_list_beers.each do |beers|
+			puts "Style: #{beers['beer_type']} | Name: #{beers['name']} | Brew Month: #{beers['brew_month']} | Keg Month: #{beers['keg_month']}"
+		end
 	elsif answer == 'view'
 		puts "Let's view a beer\n\n"
 	elsif answer !='exit' && answer != 'enter' && answer != 'delete' && answer != 'view'
