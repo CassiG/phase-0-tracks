@@ -26,14 +26,18 @@ homebrew_db = SQLite3::Database.new('homebrew.db')
 
 create_table_cmd = 
 	<<-Homebrew_db
-		CREATE TABLE homebrew (
+		CREATE TABLE IF NOT EXISTS homebrew (
 			id INTEGER PRIMARY KEY,
 			beer_type VARCHAR(255),
 			name VARCHAR(255), 
 			brew_month VARCHAR(255),
 			keg_month VARCHAR(255),
-			is_ready BOOLEAN
+			is_ready_brew BOOLEAN,
+			is_ready_keg BOOLEAN
 		)
 	Homebrew_db
 
 homebrew_db.execute(create_table_cmd)
+
+#Test Beer
+#homebrew_db.execute('INSERT INTO homebrew (beer_type, name, brew_month, keg_month, is_ready_brew, is_ready_keg) VALUES ("IPA", "Hometown IPA", "May", "July", "true", "false")')
