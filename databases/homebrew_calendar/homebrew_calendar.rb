@@ -31,9 +31,7 @@ create_table_cmd =
 			beer_type VARCHAR(255),
 			name VARCHAR(255), 
 			brew_month VARCHAR(255),
-			keg_month VARCHAR(255),
-			is_ready_brew BOOLEAN,
-			is_ready_keg BOOLEAN
+			keg_month VARCHAR(255)
 		)
 	Homebrew_db
 
@@ -44,25 +42,23 @@ homebrew_db.execute(create_table_cmd)
 
 # USER PROGRAM
 
-def begin_program 
-	answer = ''
-	while answer != 'exit' do
-		puts "Type 'enter' to enter a new beer, 'delete' to delete a beer, or 'view' to view the current beer calendar. Type 'exit' to exit program."
-		answer = gets.chomp.downcase
-
-		if answer == 'enter'
-			puts "Let's enter a beer\n\n"
-		elsif answer == 'delete'
-			puts "Let's delete a beer\n\n"
-		elsif answer == 'view'
-			puts "Let's view a beer\n\n"
-		elsif answer !='exit' && answer != 'enter' && answer != 'delete' && answer != 'view'
-			puts "Please enter one of the four choices\n\n"
-		end
-
-		break if answer == 'exit'
-	end	
+def enter_beer(homebrew_db, beer_type, name, brew_month, keg_month)
+	homebrew_db.execute("INSERT INTO homebrew (beer_type, name, brew_month, keg_month) VALUES (?, ?, ?, ?)", [beer_type, name, brew_month, keg_month] )
 end
 
-# USER INTERFACE
-begin_program
+
+puts "Please enter the style of beer you'd like to brew"
+	beer_type = gets.chomp.downcase
+
+	puts "What are you going to call your beer?"
+	name = gets.chomp.downcase
+
+	puts "What month would you like to brew"
+	brew_month = gets.chomp.downcase
+
+	puts "What month are you going to keg?"
+	keg_month = gets.chomp.downcase
+enter_beer(homebrew_db, beer_type, name, brew_month, keg_month)
+list_beers = homebrew_db.execute("SELECT * FROM homebrew")
+
+p list_beers
