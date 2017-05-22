@@ -39,7 +39,7 @@ create_table_cmd =
 
 homebrew_db.execute(create_table_cmd)
 
-# Program
+# Database Queries
 def enter_beer(homebrew_db, beer_type, name, brew_month, keg_month)
 	homebrew_db.execute("INSERT INTO homebrew (beer_type, name, brew_month, keg_month) VALUES (?, ?, ?, ?)", [beer_type, name, brew_month, keg_month] )
 end
@@ -68,8 +68,8 @@ while answer != 'exit' do
 
 		puts "What month are you going to keg?"
 		keg_month = gets.chomp.downcase
-	
-		enter_beer(homebrew_db, beer_type, name, brew_month, keg_month)
+
+		enter_beer_query(homebrew_db, beer_type, name, brew_month, keg_month)
 	elsif answer == 'delete'
 		list_beers = homebrew_db.execute("SELECT * FROM homebrew")
 
