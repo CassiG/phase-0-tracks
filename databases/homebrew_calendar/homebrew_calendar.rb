@@ -58,8 +58,8 @@ def user_lines
 	puts "-" * 60
 end
 
-def capitalize_phrase(str)
-	str.split(' ').map {|word| word.capitalize}.join(' ')
+def capitalize_phrase(cap_str)
+	cap_str.split(' ').map {|word| word.capitalize}.join(' ')
 end
 
 # User Interface
@@ -113,10 +113,14 @@ while answer != 'exit' do
 		end
 		
 	elsif answer == 'delete'
+		user_lines
+		puts "Current List"
+		user_lines
+
 		list_beers = homebrew_db.execute("SELECT * FROM homebrew")
 
 		list_beers.each do |beers|
-			puts "Style: #{beers['beer_type']} | Name: #{beers['name']} | Brew Month: #{beers['brew_month']} | Keg Month: #{beers['keg_month']}"
+			puts "Name: #{capitalize_phrase(beers['name'])} \t Style: #{capitalize_phrase(beers['beer_type'])} \t Brew Month: #{beers['brew_month']} \t Keg Month: #{beers['keg_month']}"
 		end
 		user_space
 
@@ -126,10 +130,14 @@ while answer != 'exit' do
 
 		delete_beer(homebrew_db, name)
 
+		user_lines
+		puts "New List"
+		user_lines
+
 		new_list_beers = homebrew_db.execute("SELECT * FROM homebrew")
 
 		new_list_beers.each do |beers|
-			puts "Style: #{beers['beer_type']} | Name: #{beers['name']} | Brew Month: #{beers['brew_month']} | Keg Month: #{beers['keg_month']}"
+			puts "Name: #{capitalize_phrase(beers['name'])} \t Style: #{capitalize_phrase(beers['beer_type'])} \t Brew Month: #{beers['brew_month']} \t Keg Month: #{beers['keg_month']}"
 		end
 		user_space
 	elsif answer == 'view'
