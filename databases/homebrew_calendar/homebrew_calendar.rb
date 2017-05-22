@@ -46,6 +46,7 @@ end
 
 def delete_beer(homebrew_db, name)
 	homebrew_db.execute("DELETE FROM homebrew WHERE name=?", [name])
+	homebrew_db.execute("VACUUM homebrew")
 end
 
 # User Readability Methods
@@ -120,7 +121,7 @@ while answer != 'exit' do
 		list_beers = homebrew_db.execute("SELECT * FROM homebrew")
 
 		list_beers.each do |beers|
-			puts "Name: #{capitalize_phrase(beers['name'])} \t Style: #{capitalize_phrase(beers['beer_type'])} \t Brew Month: #{beers['brew_month']} \t Keg Month: #{beers['keg_month']}"
+			puts "#{beers['id']}: Name: #{capitalize_phrase(beers['name'])} \t Style: #{capitalize_phrase(beers['beer_type'])} \t Brew Month: #{beers['brew_month']} \t Keg Month: #{beers['keg_month']}"
 		end
 		user_space
 
