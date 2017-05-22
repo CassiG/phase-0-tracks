@@ -48,25 +48,34 @@ def delete_beer(homebrew_db, name)
 	homebrew_db.execute("DELETE FROM homebrew WHERE name=?", [name])
 end
 
+# Program Methods
+
+def user_space
+	puts "\n\n"
+end
+
 # User Interface
 
 puts "-" * 60
 puts "Welcome to HmBrw, the calendar for Homebrew Enthusiasts"
 puts "-" * 60
-puts "\n\n"
+user_space
 
 answer = ''	
 
 while answer != 'exit' do
 	puts "Type 'enter' to enter a new beer, 'delete' to delete a beer, or 'view' to view the current beer calendar. Type 'exit' to exit program."
 	answer = gets.chomp.downcase
+	user_space
 
 	if answer == 'enter'
 		puts "Please enter the style of beer you'd like to brew (IPA, Red Ale, Pale Ale or Stout"
 		beer_type = gets.chomp.downcase
+		user_space
 
 		puts "What are you going to call your beer?"
 		name = gets.chomp.downcase
+		user_space
 
 		if beer_type == "ipa"
 			brew_month = "March"
@@ -88,9 +97,11 @@ while answer != 'exit' do
 
 			list_beers = homebrew_db.execute("SELECT * FROM homebrew")
 			
-			puts "You're brewing an #{beer_type}. You should start brewing in #{brew_month}. Your beer will be kegged and ready to drink in #{keg_month}"
-
-		else puts "HmBrw currently only supports 4 beer styles. Check back later for more"
+			puts "You're brewing an #{beer_type.capitalize}. You should start brewing in #{brew_month}. Your beer will be kegged and ready to drink in #{keg_month}"
+			user_space
+		else 
+			puts "HmBrw currently only supports 4 beer styles. Check back later for more"
+			user_space
 		end
 		
 	elsif answer == 'delete'
@@ -99,9 +110,11 @@ while answer != 'exit' do
 		list_beers.each do |beers|
 			puts "Style: #{beers['beer_type']} | Name: #{beers['name']} | Brew Month: #{beers['brew_month']} | Keg Month: #{beers['keg_month']}"
 		end
+		user_space
 
 		puts "Enter the name of the beer you'd like to delete"
 		name = gets.chomp.downcase
+		user_space
 
 		delete_beer(homebrew_db, name)
 
@@ -110,14 +123,17 @@ while answer != 'exit' do
 		new_list_beers.each do |beers|
 			puts "Style: #{beers['beer_type']} | Name: #{beers['name']} | Brew Month: #{beers['brew_month']} | Keg Month: #{beers['keg_month']}"
 		end
+		user_space
 	elsif answer == 'view'
 		list_beers = homebrew_db.execute("SELECT * FROM homebrew")
 
 		list_beers.each do |beers|
 			puts "Style: #{beers['beer_type']} | Name: #{beers['name']} | Brew Month: #{beers['brew_month']} | Keg Month: #{beers['keg_month']}"
 		end
+		user_space
 	elsif answer !='exit' && answer != 'enter' && answer != 'delete' && answer != 'view'
 		puts "Please enter one of the four choices\n\n"
+		user_space
 	end
 
 	break if answer == 'exit'
