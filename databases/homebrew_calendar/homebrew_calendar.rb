@@ -75,14 +75,18 @@ while answer != 'exit' do
 		elsif beer_type == "stout"
 			brew_month = "October"
 			keg_month = "December"
-		else puts "HmBrw currently only supports 4 beer styles. Check back later for more"
 		end
 
-		enter_beer(homebrew_db, beer_type, name, brew_month, keg_month)
+		if beer_type == "ipa" || beer_type == "red ale" || beer_type == "pale ale" || beer_type == "stout"
+			
+			enter_beer(homebrew_db, beer_type, name, brew_month, keg_month)
 
-		list_beers = homebrew_db.execute("SELECT * FROM homebrew")
+			list_beers = homebrew_db.execute("SELECT * FROM homebrew")
+			
+			puts "You're brewing an #{beer_type}. You should start brewing in #{brew_month}. Your beer will be kegged and ready to drink in #{keg_month}"
 
-		puts "You're brewing an #{'beer_type'}. You should start brewing in #{'brew_month'}. Your beer will be kegged and ready to drink in #{'keg_month'}"
+		else puts "HmBrw currently only supports 4 beer styles. Check back later for more"
+		end
 		
 	elsif answer == 'delete'
 		list_beers = homebrew_db.execute("SELECT * FROM homebrew")
