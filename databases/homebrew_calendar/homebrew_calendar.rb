@@ -54,11 +54,15 @@ def user_space
 	puts "\n\n"
 end
 
+def user_lines
+	puts "-" * 60
+end
+
 # User Interface
 
-puts "-" * 60
+user_lines
 puts "Welcome to HmBrw, the calendar for Homebrew Enthusiasts"
-puts "-" * 60
+user_lines
 user_space
 
 answer = ''	
@@ -127,8 +131,13 @@ while answer != 'exit' do
 	elsif answer == 'view'
 		list_beers = homebrew_db.execute("SELECT * FROM homebrew")
 
+		user_lines
+		puts "Brew Calendar"
+		user_lines
+
+		puts
 		list_beers.each do |beers|
-			puts "Style: #{beers['beer_type']} | Name: #{beers['name']} | Brew Month: #{beers['brew_month']} | Keg Month: #{beers['keg_month']}"
+			puts "Name: #{beers['name']} \t Style: #{beers['beer_type']} \t Brew Month: #{beers['brew_month']} \t Keg Month: #{beers['keg_month']}"
 		end
 		user_space
 	elsif answer !='exit' && answer != 'enter' && answer != 'delete' && answer != 'view'
