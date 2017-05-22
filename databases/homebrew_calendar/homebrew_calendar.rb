@@ -48,7 +48,7 @@ def delete_beer(homebrew_db, name)
 	homebrew_db.execute("DELETE FROM homebrew WHERE name=?", [name])
 end
 
-# Program Methods
+# User Readability Methods
 
 def user_space
 	puts "\n\n"
@@ -56,6 +56,10 @@ end
 
 def user_lines
 	puts "-" * 60
+end
+
+def capitalize_phrase(str)
+	str.split(' ').map {|word| word.capitalize}.join(' ')
 end
 
 # User Interface
@@ -137,7 +141,7 @@ while answer != 'exit' do
 
 		puts
 		list_beers.each do |beers|
-			puts "Name: #{beers['name']} \t Style: #{beers['beer_type']} \t Brew Month: #{beers['brew_month']} \t Keg Month: #{beers['keg_month']}"
+			puts "Name: #{capitalize_phrase(beers['name'])} \t Style: #{capitalize_phrase(beers['beer_type'])} \t Brew Month: #{beers['brew_month']} \t Keg Month: #{beers['keg_month']}"
 		end
 		user_space
 	elsif answer !='exit' && answer != 'enter' && answer != 'delete' && answer != 'view'
