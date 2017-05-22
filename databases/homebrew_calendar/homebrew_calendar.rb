@@ -8,7 +8,7 @@
 # Create a database to store beer information
 # First create a program to ask user if they'd like to enter a beer, delete a beer, or see the current beer calendar 
 	# If they'd like to enter a beer
-		# Ask what kind of beer they'd like to make
+		# Ask what kind of beer they'd like to make (Give 4 to choose from)
 		# Ask for the name
 		# Display what month to start brewing depending on the month, and when to keg
 		# Store data in a database table
@@ -57,19 +57,33 @@ while answer != 'exit' do
 	answer = gets.chomp.downcase
 
 	if answer == 'enter'
-		puts "Please enter the style of beer you'd like to brew"
+		puts "Please enter the style of beer you'd like to brew (IPA, Red Ale, Pale Ale or Stout"
 		beer_type = gets.chomp.downcase
 
 		puts "What are you going to call your beer?"
 		name = gets.chomp.downcase
 
-		puts "What month would you like to brew"
-		brew_month = gets.chomp.downcase
+		if beer_type == "ipa"
+			brew_month = "March"
+			keg_month = "May"
+		elsif beer_type == "red ale"
+			brew_month = "February"
+			keg_month = "March"
+		elsif beer_type == "pale ale"
+			brew_month = "March"
+			keg_month = "April"
+		elsif beer_type == "stout"
+			brew_month = "October"
+			keg_month = "December"
+		else puts "HmBrw currently only supports 4 beer styles. Check back later for more"
+		end
 
-		puts "What month are you going to keg?"
-		keg_month = gets.chomp.downcase
+		enter_beer(homebrew_db, beer_type, name, brew_month, keg_month)
 
-		enter_beer_query(homebrew_db, beer_type, name, brew_month, keg_month)
+		list_beers = homebrew_db.execute("SELECT * FROM homebrew")
+
+		puts "You're brewing an #{'beer_type'}. You should start brewing in #{'brew_month'}. Your beer will be kegged and ready to drink in #{'keg_month'}"
+		
 	elsif answer == 'delete'
 		list_beers = homebrew_db.execute("SELECT * FROM homebrew")
 
