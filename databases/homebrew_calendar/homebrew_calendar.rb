@@ -48,7 +48,12 @@ def delete_beer(homebrew_db, name)
 	homebrew_db.execute("DELETE FROM homebrew WHERE name=?", [name])
 end
 
-# Ask User to enter beer
+# User Interface
+
+puts "-" * 60
+puts "Welcome to HmBrw, the calendar for Homebrew Enthusiasts"
+puts "-" * 60
+puts "\n\n"
 
 answer = ''	
 
