@@ -88,7 +88,11 @@ while answer != 'exit' do
 			puts "Style: #{beers['beer_type']} | Name: #{beers['name']} | Brew Month: #{beers['brew_month']} | Keg Month: #{beers['keg_month']}"
 		end
 	elsif answer == 'view'
-		puts "Let's view a beer\n\n"
+		list_beers = homebrew_db.execute("SELECT * FROM homebrew")
+
+		list_beers.each do |beers|
+			puts "Style: #{beers['beer_type']} | Name: #{beers['name']} | Brew Month: #{beers['brew_month']} | Keg Month: #{beers['keg_month']}"
+		end
 	elsif answer !='exit' && answer != 'enter' && answer != 'delete' && answer != 'view'
 		puts "Please enter one of the four choices\n\n"
 	end
