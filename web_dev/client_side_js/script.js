@@ -10,3 +10,10 @@ function changeColor(event) {
 
 var color = document.getElementById("first-paragraph");
 color.addEventListener("mouseover", changeColor);
+
+function addPhoto(event){
+	document.getElementById("img").innerHTML += "<img src='hooray.gif'>";
+};
+
+var button = document.getElementById("hooray");
+hooray.addEventListener("click", addPhoto)
