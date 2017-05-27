@@ -44,3 +44,11 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# DO THE THING 
+# write a GET route that displays an address
+
+get '/contact' do
+  "<p>0001 Moon of Earth<br>
+   Milky Way Galaxy, Known Universe 1</p>"
+end
