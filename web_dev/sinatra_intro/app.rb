@@ -52,3 +52,13 @@ get '/contact' do
   "<p>0001 Moon of Earth<br>
    Milky Way Galaxy, Known Universe 1</p>"
 end
+
+# write a GET parameter that takes a name as a query parameter vs a route parameter
+get '/great-job' do
+  name = params[:name]
+  if name 
+    "Great job #{name}!"
+  else 
+    "Great Job"
+  end
+end
