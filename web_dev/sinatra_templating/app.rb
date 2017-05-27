@@ -25,7 +25,7 @@ end
 
 # create new students via
 # a form
-post '/students' do
+post '/' do
   db.execute("UPDATE students SET diet = ? WHERE name = ?", [params['diet'], params['name']])
   redirect '/'
 end
