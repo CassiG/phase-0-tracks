@@ -19,7 +19,7 @@ get '/about/:person' do
   "#{person} is a programmer, and #{person} is learning Sinatra."
 end
 
-get '/:person_1/loves/:person_2' do
+get '/:person_1/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
 end
 
@@ -44,3 +44,29 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# DO THE THING 
+# write a GET route that displays an address
+
+get '/contact' do
+  "<p>0001 Moon of Earth<br>
+   Milky Way Galaxy, Known Universe 1</p>"
+end
+
+# write a GET parameter that takes a name as a query parameter vs a route parameter
+get '/great-job' do
+  name = params[:name]
+  if name 
+    "Great job #{name}!"
+  else 
+    "Great Job"
+  end
+end
+
+# write a GET parameter A route that uses route parameters to add two numbers and respond with the result
+
+get '/:num1/plus/:num2' do 
+  result = params[:num1].to_i + params[:num2].to_i
+  "#{result}"
+end
+
