@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Create a </title>
+  <title>Create a Student Database</title>
 </head>
 <body>
-
+  <p>
   <% students.each do |student| %>
   	<% = student['name'] %>, <%=student['diet'] %>
-  <% end %>
+  <% end %></p>
 
   <form action="/students" method="POST"> 
     
