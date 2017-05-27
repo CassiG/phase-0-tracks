@@ -8,20 +8,24 @@ db = SQLite3::Database.new("students.db")
 db.results_as_hash = true
 
 # show students on the home page
-get '/' do
-  @students = db.execute("SELECT * FROM students")
-  erb :home
-end
+#get '/' do
+ # @students = db.execute("SELECT * FROM students")
+ # erb :home
+#end
 
-get '/students/new' do
-  erb :new_student
+#get '/students/new' do
+ # erb :new_student
+#end
+
+## Pair Programming code
+get '/' do 
+  @students = db.execute("SELECT * FROM students")
+  erb :index
 end
 
 # create new students via
 # a form
-post '/students' do
-  db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
+post '/' do
+  db.execute("UPDATE students SET diet = ? WHERE name = ?", [params['diet'], params['name']])
   redirect '/'
 end
-
-# add static resources
