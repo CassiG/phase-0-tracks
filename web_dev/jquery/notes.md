@@ -17,3 +17,9 @@ Expirimenting with testing some fo the things I've researched, and begin gatheri
 
 # Reflection - 25 minutes
 Spending some time filling in any gaps in knowledge/questions I had from the testing phase and solidifying how to do the specific jquery tactics I want to try for the project. 
+======
+
+### Research Resources/Links
+
+### jQuery syntax and methods to try - general notes
+
