@@ -1,3 +1,3 @@
-$(document).ready(function(){
-	document.write("Hello, World!");
+$("#button").click(function(){
+    $("#div").addClass("class");
 });

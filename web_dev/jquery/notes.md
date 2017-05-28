@@ -9,16 +9,17 @@ My brain works best to research and then test so how I will break this up is the
 # Resource Gathering 10 mins/ Researching - 15 minutes
 Spend some time looking up JQuery guides, cheat sheets, and tips. Spend this time reading through the guides I collected, taking notes on things I want to try. 
 
-#Repeat
-
 # Testing - 25 minutes
-Expirimenting with testing some fo the things I've researched, and begin gathering notes on jquery techniques I want to try
+Expirimenting with testing some of the things I've researched, and begin gathering notes on jquery techniques I want to try
+
+#Repeat
 
 # Reflection - 25 minutes
 Spending some time filling in any gaps in knowledge/questions I had from the testing phase and solidifying how to do the specific jquery tactics I want to try for the project. 
 ======
 
 ### Research Resources/Links
+https://learn.jquery.com/about-jquery/
 
 ### jQuery syntax and methods to try - general notes
 
