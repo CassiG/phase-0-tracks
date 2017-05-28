@@ -20,6 +20,8 @@ Spending some time filling in any gaps in knowledge/questions I had from the tes
 
 ### Research Resources/Links
 https://learn.jquery.com/about-jquery/
+https://www.tutorialspoint.com/jquery/jquery-quick-guide.htm
+https://makeawebsitehub.com/jquery-mega-cheat-sheet/
 
 ### jQuery syntax and methods to try - general notes
-
+After doing some research and looking up methods, I've found the best learning style right now is to find a cheatsheet and try out different functions - just googling questions as I had them during the trial and error. 
