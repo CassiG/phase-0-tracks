@@ -1,3 +1,5 @@
+/* jQuery Styles */
+
 .hidden {
 	display: none;
 }
@@ -5,3 +7,11 @@
 #secret-msg-reveal {
 	color: #fff;
 }
+
+.reveal-msg {
+	background-color: #000;
+	height: 100px;
+	width: 300px;
+}
+
+/* Main Styles */
