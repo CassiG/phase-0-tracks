@@ -6,11 +6,10 @@ To tackle this task first I'm going to time box it. I'm a big fan of the Pomodor
 
 My brain works best to research and then test so how I will break this up is the following: resource gathering, researching, testing, relfection. 
 
-# Resource Gathering - 25 minutes
-Spend some time looking up JQuery guides, cheat sheets, and tips
+# Resource Gathering 10 mins/ Researching - 15 minutes
+Spend some time looking up JQuery guides, cheat sheets, and tips. Spend this time reading through the guides I collected, taking notes on things I want to try. 
 
-# Researching - 25 mintues
-Spend this time reading through the guides I collected, taking notes on things I want to try. 
+#Repeat
 
 # Testing - 25 minutes
 Expirimenting with testing some fo the things I've researched, and begin gathering notes on jquery techniques I want to try
