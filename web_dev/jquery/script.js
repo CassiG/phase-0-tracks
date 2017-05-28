@@ -13,6 +13,7 @@ $('#reveal').click(function(){
 $('#new-message').click(function(){
 	$('#secret-msg-reveal').empty();
 	$('#secret-msg').val('');
+	$('#secret-msg-reveal').removeClass('reveal-msg');
 	$('.msg-revealed').addClass('hidden');
 	$('form').show();
 

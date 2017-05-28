@@ -9,7 +9,7 @@
 <body>
 
 	<h1>Secret Message Sender</h1>
-	<p>Send a secret message! They'll never know!</p>
+	<h3>Send a secret message! They'll never know!</h3>
 	<!-- Div area for secret message -->
 
 	<div id="secret-msg-reveal"></div>
@@ -18,14 +18,14 @@
 
 	<form>
 		Enter your secret message: <br />
-		<input type="textarea" name="secretmessage" id="secret-msg">
+		<textarea name="secretmessage" id="secret-msg" rows="5" cols="50"></textarea>
 		<button id="save-message">Shh! It's a Secret</button>
 	</form>
 
 	<!-- Button to reveal secret message -->
 	<div class="msg-revealed hidden">
 		<p>A secret message has been entered</p>
-		<button id="reveal">Click to Reveal!</button>
+		<button id="reveal">Click to Reveal!</button><br />
 		<button id="new-message">Enter a new message</button>
 	</div>
 
