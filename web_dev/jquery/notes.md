@@ -32,4 +32,4 @@ After doing some research and looking up methods, I've found the best learning s
 - User 1 enters a secret message
 - Clicks save to enter it (this user form dissapears with a note "Thank you for your message")
     + This enters the text above, in white
-- Next page can display a slider - which you can slide to make the area black to read the secret message. 
+- Button appears to reveal the message - change the opacity of the div to black
