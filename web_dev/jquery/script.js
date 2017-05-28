@@ -1,6 +1,10 @@
 $("#button").click(function(){
-    $("#div").addClass('class').animate({
+    $("#div").class.animate({
     	opacity: 0.4,    	
     	height: "70%"
     }, 1500);
+});
+
+$('#save-message').click(function(){
+	document.write($('#secret-msg').val());
 });
