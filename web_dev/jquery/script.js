@@ -11,3 +11,11 @@ $('#reveal').click(function(){
 		backgroundColor: '#000'
 	}, 1500);
 });
+
+$('#new-message').click(function(){
+	$('#secret-msg-reveal').empty();
+	$('#secret-msg').val('');
+	$('.msg-revealed').addClass('hidden');
+	$('form').show();
+
+});
