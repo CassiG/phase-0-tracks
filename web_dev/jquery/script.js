@@ -5,3 +5,9 @@ $('#save-message').click(function(event){
 	$('.msg-revealed').removeClass('hidden');
 	$('form').hide();
 });
+
+$('#reveal').click(function(){
+	$('#secret-msg-reveal').animate({
+		backgroundColor: '#000'
+	}, 1500);
+});
